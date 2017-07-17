@@ -1,0 +1,4444 @@
+8
+use-train-2 = 0
+parameter-path = .
+thread-num = 1
+filtered-arc-train1 = 0
+option_file_path = ./option.txt
+inst-max-num-eval = -1000
+inst-max-len-to-throw = -10
+fcutoff = 0
+inst-num-from-train-1-one-iter = 10000
+display-interval = 100
+param-num-for-eval = 6
+param-tmp-num = 1
+inst-max-num-train = -1000
+test-batch-size = 10000
+labeled = 1
+conservative-constrained-training = 0 
+test = 0
+iter-num = 1000
+parameter-exist = 1
+dictionary-path = .
+dev-file = /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag
+test-file = /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/test.conll
+output-file = test.out.conll06
+train = 1
+dictionary-exist = 1
+train-file = /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.train.txt.opentest.tag
+wordCutOff = 0
+featCutOff = 0
+charCutOff = 0
+initRange = 0.01
+maxIter = 1000
+batchSize = 200
+adaEps = 1e-12
+adaAlpha = 0.01
+momentum = 0.85
+regParameter = 0
+dropProb = 0
+clip = 15
+segHiddenSize = 100
+hiddenSize = 200
+rnnHiddenSize = 100
+wordEmbeddingDim = 100
+posEmbeddingDim = 100
+wordcontext = 2
+wordEmbFineTune = 1
+charEmbSize = 50
+charcontext = 2
+charEmbFineTune = 1
+charhiddenSize = 50
+typeEmbSize = 50
+typeEmbFineTune = 1
+verboseIter = 1
+saveItermediate = 1
+train = 0
+maxInstance = 10
+outBest = .debug
+relu = 0
+seg = 1
+atomLayers = 1
+rnnLayers = 1
+maxsegLen = 5
+beam = 1
+maxlength = 256
+wordFile = /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/glove.6B.100d.txt
+charFile = 
+segFile = 
+mlp_size = 300
+mlp_rel_size = 300
+lstm_output_size = 100
+Get all instances from /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.train.txt.opentest.tag	[Mon Jun 19 11:45:48 2017]
+
+instance num: 39832
+Done!	[Mon Jun 19 11:45:50 2017]
+Get all instances from /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag	[Mon Jun 19 11:45:50 2017]
+
+instance num: 1700
+Done!	[Mon Jun 19 11:45:50 2017]
+FGen : loading feature dictionaries from "."	[Mon Jun 19 11:45:50 2017]
+FeatureDictionary : loading from "./words.gz" 
+FeatureDictionary :  44391 features
+FeatureDictionary : loading from "./pos.gz" 
+FeatureDictionary :  45 features
+FeatureDictionary : loading from "./labels.gz" 
+FeatureDictionary :  45 features
+word number: 44391
+pos number: 45
+label number: 45
+
+ done!
+	[Mon Jun 19 11:45:50 2017]
+load dict done!
+word embedding dim is 100
+-UNKNOWN- not found, using averaged value to initialize.
+OOV num is 18761, total num is 44391, embedding oov ratio is 0.422631
+unknown id2
+unknown id2
+unknown id-1
+train begining...
+
+***** Iteration #1 *****	[Mon Jun 19 11:45:59 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 11:46:20 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 11:46:41 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 11:47:01 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 11:47:21 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 11:47:42 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 11:48:02 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 11:48:23 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 11:48:44 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 11:49:05 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 11:49:26 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=1]	[Mon Jun 19 11:49:26 2017]
+
+instance num: 1700	[Mon Jun 19 11:49:55 2017]
+
+ done 	[Mon Jun 19 11:49:55 2017]
+CM:    	105/1700 = 6.17647
+ROOT:  	1397/1700 = 82.17647
+UAS:   	28342/40117 = 70.64835
+LAS:   	28342/40117 = 70.64835
+
+best UAS so far (a): 70.64835 [it = 1]
+
+***** Iteration #2 *****	[Mon Jun 19 11:50:05 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 11:50:26 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 11:50:46 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 11:51:07 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 11:51:27 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 11:51:48 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 11:52:08 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 11:52:29 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 11:52:49 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 11:53:10 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 11:53:30 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=2]	[Mon Jun 19 11:53:30 2017]
+
+instance num: 1700	[Mon Jun 19 11:54:00 2017]
+
+ done 	[Mon Jun 19 11:54:00 2017]
+CM:    	265/1700 = 15.58824
+ROOT:  	1592/1700 = 93.64706
+UAS:   	32397/40117 = 80.75629
+LAS:   	32397/40117 = 80.75629
+
+best UAS so far (a): 80.75629 [it = 2]
+
+***** Iteration #3 *****	[Mon Jun 19 11:54:11 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 11:54:32 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 11:54:53 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 11:55:14 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 11:55:35 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 11:55:56 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 11:56:17 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 11:56:37 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 11:56:58 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 11:57:18 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 11:57:39 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=3]	[Mon Jun 19 11:57:39 2017]
+
+instance num: 1700	[Mon Jun 19 11:58:08 2017]
+
+ done 	[Mon Jun 19 11:58:08 2017]
+CM:    	334/1700 = 19.64706
+ROOT:  	1576/1700 = 92.70588
+UAS:   	33814/40117 = 84.28846
+LAS:   	33814/40117 = 84.28846
+
+best UAS so far (a): 84.28846 [it = 3]
+
+***** Iteration #4 *****	[Mon Jun 19 11:58:19 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 11:58:40 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 11:59:00 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 11:59:20 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 11:59:41 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:00:02 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:00:23 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:00:44 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:01:04 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:01:25 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:01:45 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=4]	[Mon Jun 19 12:01:45 2017]
+
+instance num: 1700	[Mon Jun 19 12:02:15 2017]
+
+ done 	[Mon Jun 19 12:02:15 2017]
+CM:    	398/1700 = 23.41176
+ROOT:  	1613/1700 = 94.88235
+UAS:   	34584/40117 = 86.20784
+LAS:   	34584/40117 = 86.20784
+
+best UAS so far (a): 86.20784 [it = 4]
+
+***** Iteration #5 *****	[Mon Jun 19 12:02:25 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:02:46 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:03:07 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:03:28 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:03:49 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:04:10 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:04:30 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:04:51 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:05:12 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:05:32 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:05:53 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=5]	[Mon Jun 19 12:05:53 2017]
+
+instance num: 1700	[Mon Jun 19 12:06:23 2017]
+
+ done 	[Mon Jun 19 12:06:23 2017]
+CM:    	448/1700 = 26.35294
+ROOT:  	1602/1700 = 94.23529
+UAS:   	34921/40117 = 87.04788
+LAS:   	34921/40117 = 87.04788
+
+best UAS so far (a): 87.04788 [it = 5]
+
+***** Iteration #6 *****	[Mon Jun 19 12:06:34 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:06:54 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:07:15 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:07:36 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:07:57 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:08:19 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:08:40 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:09:01 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:09:23 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:09:44 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:10:05 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=6]	[Mon Jun 19 12:10:05 2017]
+
+instance num: 1700	[Mon Jun 19 12:10:35 2017]
+
+ done 	[Mon Jun 19 12:10:35 2017]
+CM:    	451/1700 = 26.52941
+ROOT:  	1598/1700 = 94.00000
+UAS:   	35278/40117 = 87.93778
+LAS:   	35278/40117 = 87.93778
+
+best UAS so far (a): 87.93778 [it = 6]
+
+***** Iteration #7 *****	[Mon Jun 19 12:10:45 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:11:07 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:11:28 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:11:49 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:12:11 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:12:31 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:12:52 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:13:12 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:13:33 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:13:53 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:14:14 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=7]	[Mon Jun 19 12:14:14 2017]
+
+instance num: 1700	[Mon Jun 19 12:14:43 2017]
+
+ done 	[Mon Jun 19 12:14:43 2017]
+CM:    	505/1700 = 29.70588
+ROOT:  	1618/1700 = 95.17647
+UAS:   	35615/40117 = 88.77782
+LAS:   	35615/40117 = 88.77782
+
+best UAS so far (a): 88.77782 [it = 7]
+
+***** Iteration #8 *****	[Mon Jun 19 12:14:54 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:15:16 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:15:39 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:15:59 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:16:20 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:16:40 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:17:01 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:17:21 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:17:42 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:18:02 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:18:23 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=8]	[Mon Jun 19 12:18:23 2017]
+
+instance num: 1700	[Mon Jun 19 12:18:53 2017]
+
+ done 	[Mon Jun 19 12:18:53 2017]
+CM:    	520/1700 = 30.58824
+ROOT:  	1615/1700 = 95.00000
+UAS:   	35632/40117 = 88.82020
+LAS:   	35632/40117 = 88.82020
+
+best UAS so far (a): 88.82020 [it = 8]
+
+***** Iteration #9 *****	[Mon Jun 19 12:19:04 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:19:24 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:19:45 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:20:06 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:20:27 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:20:48 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:21:09 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:21:30 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:21:50 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:22:11 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:22:32 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=9]	[Mon Jun 19 12:22:32 2017]
+
+instance num: 1700	[Mon Jun 19 12:23:02 2017]
+
+ done 	[Mon Jun 19 12:23:02 2017]
+CM:    	522/1700 = 30.70588
+ROOT:  	1612/1700 = 94.82353
+UAS:   	35743/40117 = 89.09689
+LAS:   	35743/40117 = 89.09689
+
+best UAS so far (a): 89.09689 [it = 9]
+
+***** Iteration #10 *****	[Mon Jun 19 12:23:13 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:23:34 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:23:55 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:24:17 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:24:38 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:24:59 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:25:20 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:25:40 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:26:01 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:26:21 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:26:42 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=10]	[Mon Jun 19 12:26:42 2017]
+
+instance num: 1700	[Mon Jun 19 12:27:10 2017]
+
+ done 	[Mon Jun 19 12:27:10 2017]
+CM:    	549/1700 = 32.29412
+ROOT:  	1629/1700 = 95.82353
+UAS:   	35900/40117 = 89.48825
+LAS:   	35900/40117 = 89.48825
+
+best UAS so far (a): 89.48825 [it = 10]
+
+***** Iteration #11 *****	[Mon Jun 19 12:27:21 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:27:42 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:28:03 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:28:25 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:28:45 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:29:06 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:29:26 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:29:47 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:30:08 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:30:28 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:30:49 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=11]	[Mon Jun 19 12:30:49 2017]
+
+instance num: 1700	[Mon Jun 19 12:31:19 2017]
+
+ done 	[Mon Jun 19 12:31:19 2017]
+CM:    	555/1700 = 32.64706
+ROOT:  	1620/1700 = 95.29412
+UAS:   	36053/40117 = 89.86963
+LAS:   	36053/40117 = 89.86963
+
+best UAS so far (a): 89.86963 [it = 11]
+
+***** Iteration #12 *****	[Mon Jun 19 12:31:30 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:31:51 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:32:12 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:32:33 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:32:54 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:33:14 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:33:35 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:33:56 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:34:16 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:34:37 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:34:58 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=12]	[Mon Jun 19 12:34:58 2017]
+
+instance num: 1700	[Mon Jun 19 12:35:28 2017]
+
+ done 	[Mon Jun 19 12:35:28 2017]
+CM:    	576/1700 = 33.88235
+ROOT:  	1623/1700 = 95.47059
+UAS:   	36078/40117 = 89.93195
+LAS:   	36078/40117 = 89.93195
+
+best UAS so far (a): 89.93195 [it = 12]
+
+***** Iteration #13 *****	[Mon Jun 19 12:35:39 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:36:00 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:36:21 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:36:41 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:37:02 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:37:23 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:37:43 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:38:03 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:38:24 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:38:45 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:39:06 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=13]	[Mon Jun 19 12:39:06 2017]
+
+instance num: 1700	[Mon Jun 19 12:39:36 2017]
+
+ done 	[Mon Jun 19 12:39:36 2017]
+CM:    	566/1700 = 33.29412
+ROOT:  	1624/1700 = 95.52941
+UAS:   	36179/40117 = 90.18371
+LAS:   	36179/40117 = 90.18371
+
+best UAS so far (a): 90.18371 [it = 13]
+
+***** Iteration #14 *****	[Mon Jun 19 12:39:48 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:40:09 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:40:29 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:40:50 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:41:11 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:41:32 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:41:53 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:42:14 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:42:35 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:42:56 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:43:17 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=14]	[Mon Jun 19 12:43:17 2017]
+
+instance num: 1700	[Mon Jun 19 12:43:47 2017]
+
+ done 	[Mon Jun 19 12:43:47 2017]
+CM:    	594/1700 = 34.94118
+ROOT:  	1627/1700 = 95.70588
+UAS:   	36285/40117 = 90.44794
+LAS:   	36285/40117 = 90.44794
+
+best UAS so far (a): 90.44794 [it = 14]
+
+***** Iteration #15 *****	[Mon Jun 19 12:43:58 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:44:20 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:44:42 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:45:03 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:45:25 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:45:46 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:46:06 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:46:27 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:46:48 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:47:08 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:47:29 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=15]	[Mon Jun 19 12:47:29 2017]
+
+instance num: 1700	[Mon Jun 19 12:47:59 2017]
+
+ done 	[Mon Jun 19 12:47:59 2017]
+CM:    	597/1700 = 35.11765
+ROOT:  	1626/1700 = 95.64706
+UAS:   	36306/40117 = 90.50029
+LAS:   	36306/40117 = 90.50029
+
+best UAS so far (a): 90.50029 [it = 15]
+
+***** Iteration #16 *****	[Mon Jun 19 12:48:10 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:48:31 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:48:51 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:49:12 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:49:33 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:49:54 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:50:15 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:50:36 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:50:57 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:51:17 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:51:38 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=16]	[Mon Jun 19 12:51:38 2017]
+
+instance num: 1700	[Mon Jun 19 12:52:08 2017]
+
+ done 	[Mon Jun 19 12:52:08 2017]
+CM:    	619/1700 = 36.41176
+ROOT:  	1620/1700 = 95.29412
+UAS:   	36338/40117 = 90.58005
+LAS:   	36338/40117 = 90.58005
+
+best UAS so far (a): 90.58005 [it = 16]
+
+***** Iteration #17 *****	[Mon Jun 19 12:52:19 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:52:41 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:53:01 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:53:23 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:53:43 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:54:05 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:54:26 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:54:47 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:55:09 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:55:29 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 12:55:50 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=17]	[Mon Jun 19 12:55:50 2017]
+
+instance num: 1700	[Mon Jun 19 12:56:20 2017]
+
+ done 	[Mon Jun 19 12:56:20 2017]
+CM:    	622/1700 = 36.58824
+ROOT:  	1631/1700 = 95.94118
+UAS:   	36389/40117 = 90.70718
+LAS:   	36389/40117 = 90.70718
+
+best UAS so far (a): 90.70718 [it = 17]
+
+***** Iteration #18 *****	[Mon Jun 19 12:56:31 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 12:56:54 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 12:57:15 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 12:57:37 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 12:57:59 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 12:58:20 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 12:58:41 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 12:59:02 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 12:59:24 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 12:59:44 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:00:05 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=18]	[Mon Jun 19 13:00:05 2017]
+
+instance num: 1700	[Mon Jun 19 13:00:37 2017]
+
+ done 	[Mon Jun 19 13:00:37 2017]
+CM:    	640/1700 = 37.64706
+ROOT:  	1628/1700 = 95.76471
+UAS:   	36362/40117 = 90.63988
+LAS:   	36362/40117 = 90.63988
+
+best UAS so far (a): 90.70718 [it = 17]
+
+***** Iteration #19 *****	[Mon Jun 19 13:00:37 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:00:58 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:01:20 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:01:41 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:02:02 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:02:24 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:02:45 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:03:05 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:03:26 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:03:47 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:04:08 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=19]	[Mon Jun 19 13:04:08 2017]
+
+instance num: 1700	[Mon Jun 19 13:04:39 2017]
+
+ done 	[Mon Jun 19 13:04:39 2017]
+CM:    	634/1700 = 37.29412
+ROOT:  	1635/1700 = 96.17647
+UAS:   	36451/40117 = 90.86173
+LAS:   	36451/40117 = 90.86173
+
+best UAS so far (a): 90.86173 [it = 19]
+
+***** Iteration #20 *****	[Mon Jun 19 13:04:50 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:05:11 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:05:31 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:05:52 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:06:12 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:06:32 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:06:53 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:07:14 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:07:35 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:07:56 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:08:17 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=20]	[Mon Jun 19 13:08:17 2017]
+
+instance num: 1700	[Mon Jun 19 13:08:48 2017]
+
+ done 	[Mon Jun 19 13:08:48 2017]
+CM:    	633/1700 = 37.23529
+ROOT:  	1634/1700 = 96.11765
+UAS:   	36509/40117 = 91.00631
+LAS:   	36509/40117 = 91.00631
+
+best UAS so far (a): 91.00631 [it = 20]
+
+***** Iteration #21 *****	[Mon Jun 19 13:08:59 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:09:20 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:09:41 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:10:02 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:10:22 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:10:42 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:11:03 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:11:24 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:11:45 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:12:06 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:12:26 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=21]	[Mon Jun 19 13:12:26 2017]
+
+instance num: 1700	[Mon Jun 19 13:12:57 2017]
+
+ done 	[Mon Jun 19 13:12:57 2017]
+CM:    	638/1700 = 37.52941
+ROOT:  	1638/1700 = 96.35294
+UAS:   	36510/40117 = 91.00880
+LAS:   	36510/40117 = 91.00880
+
+best UAS so far (a): 91.00880 [it = 21]
+
+***** Iteration #22 *****	[Mon Jun 19 13:13:08 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:13:30 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:13:51 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:14:12 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:14:33 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:14:54 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:15:14 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:15:35 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:15:57 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:16:18 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:16:39 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=22]	[Mon Jun 19 13:16:39 2017]
+
+instance num: 1700	[Mon Jun 19 13:17:10 2017]
+
+ done 	[Mon Jun 19 13:17:10 2017]
+CM:    	614/1700 = 36.11765
+ROOT:  	1636/1700 = 96.23529
+UAS:   	36492/40117 = 90.96393
+LAS:   	36492/40117 = 90.96393
+
+best UAS so far (a): 91.00880 [it = 21]
+
+***** Iteration #23 *****	[Mon Jun 19 13:17:10 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:17:31 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:17:52 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:18:13 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:18:34 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:18:55 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:19:15 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:19:36 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:19:57 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:20:19 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:20:40 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=23]	[Mon Jun 19 13:20:40 2017]
+
+instance num: 1700	[Mon Jun 19 13:21:11 2017]
+
+ done 	[Mon Jun 19 13:21:11 2017]
+CM:    	651/1700 = 38.29412
+ROOT:  	1632/1700 = 96.00000
+UAS:   	36566/40117 = 91.14839
+LAS:   	36566/40117 = 91.14839
+
+best UAS so far (a): 91.14839 [it = 23]
+
+***** Iteration #24 *****	[Mon Jun 19 13:21:22 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:21:44 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:22:05 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:22:26 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:22:46 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:23:07 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:23:27 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:23:48 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:24:09 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:24:30 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:24:52 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=24]	[Mon Jun 19 13:24:52 2017]
+
+instance num: 1700	[Mon Jun 19 13:25:23 2017]
+
+ done 	[Mon Jun 19 13:25:23 2017]
+CM:    	660/1700 = 38.82353
+ROOT:  	1630/1700 = 95.88235
+UAS:   	36632/40117 = 91.31291
+LAS:   	36632/40117 = 91.31291
+
+best UAS so far (a): 91.31291 [it = 24]
+
+***** Iteration #25 *****	[Mon Jun 19 13:25:34 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:25:55 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:26:16 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:26:38 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:26:59 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:27:21 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:27:42 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:28:03 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:28:24 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:28:45 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:29:06 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=25]	[Mon Jun 19 13:29:06 2017]
+
+instance num: 1700	[Mon Jun 19 13:29:38 2017]
+
+ done 	[Mon Jun 19 13:29:38 2017]
+CM:    	665/1700 = 39.11765
+ROOT:  	1631/1700 = 95.94118
+UAS:   	36653/40117 = 91.36526
+LAS:   	36653/40117 = 91.36526
+
+best UAS so far (a): 91.36526 [it = 25]
+
+***** Iteration #26 *****	[Mon Jun 19 13:29:49 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:30:10 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:30:31 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:30:53 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:31:15 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:31:36 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:31:58 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:32:19 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:32:39 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:33:01 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:33:22 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=26]	[Mon Jun 19 13:33:22 2017]
+
+instance num: 1700	[Mon Jun 19 13:33:53 2017]
+
+ done 	[Mon Jun 19 13:33:53 2017]
+CM:    	649/1700 = 38.17647
+ROOT:  	1636/1700 = 96.23529
+UAS:   	36576/40117 = 91.17332
+LAS:   	36576/40117 = 91.17332
+
+best UAS so far (a): 91.36526 [it = 25]
+
+***** Iteration #27 *****	[Mon Jun 19 13:33:53 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:34:14 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:34:35 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:34:56 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:35:17 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:35:38 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:35:59 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:36:20 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:36:41 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:37:02 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:37:23 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=27]	[Mon Jun 19 13:37:23 2017]
+
+instance num: 1700	[Mon Jun 19 13:37:54 2017]
+
+ done 	[Mon Jun 19 13:37:54 2017]
+CM:    	655/1700 = 38.52941
+ROOT:  	1637/1700 = 96.29412
+UAS:   	36671/40117 = 91.41013
+LAS:   	36671/40117 = 91.41013
+
+best UAS so far (a): 91.41013 [it = 27]
+
+***** Iteration #28 *****	[Mon Jun 19 13:38:05 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:38:26 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:38:47 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:39:08 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:39:29 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:39:50 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:40:11 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:40:32 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:40:53 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:41:14 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:41:35 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=28]	[Mon Jun 19 13:41:35 2017]
+
+instance num: 1700	[Mon Jun 19 13:42:07 2017]
+
+ done 	[Mon Jun 19 13:42:07 2017]
+CM:    	669/1700 = 39.35294
+ROOT:  	1640/1700 = 96.47059
+UAS:   	36665/40117 = 91.39517
+LAS:   	36665/40117 = 91.39517
+
+best UAS so far (a): 91.41013 [it = 27]
+
+***** Iteration #29 *****	[Mon Jun 19 13:42:07 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:42:28 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:42:49 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:43:11 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:43:32 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:43:53 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:44:14 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:44:35 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:44:56 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:45:18 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:45:40 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=29]	[Mon Jun 19 13:45:40 2017]
+
+instance num: 1700	[Mon Jun 19 13:46:11 2017]
+
+ done 	[Mon Jun 19 13:46:11 2017]
+CM:    	663/1700 = 39.00000
+ROOT:  	1628/1700 = 95.76471
+UAS:   	36649/40117 = 91.35529
+LAS:   	36649/40117 = 91.35529
+
+best UAS so far (a): 91.41013 [it = 27]
+
+***** Iteration #30 *****	[Mon Jun 19 13:46:11 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:46:32 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:46:54 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:47:15 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:47:36 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:47:56 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:48:16 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:48:38 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:48:59 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:49:20 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:49:41 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=30]	[Mon Jun 19 13:49:41 2017]
+
+instance num: 1700	[Mon Jun 19 13:50:13 2017]
+
+ done 	[Mon Jun 19 13:50:13 2017]
+CM:    	669/1700 = 39.35294
+ROOT:  	1643/1700 = 96.64706
+UAS:   	36665/40117 = 91.39517
+LAS:   	36665/40117 = 91.39517
+
+best UAS so far (a): 91.41013 [it = 27]
+
+***** Iteration #31 *****	[Mon Jun 19 13:50:13 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:50:34 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:50:57 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:51:18 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:51:39 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:52:00 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:52:23 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:52:44 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:53:06 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:53:27 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:53:49 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=31]	[Mon Jun 19 13:53:49 2017]
+
+instance num: 1700	[Mon Jun 19 13:54:20 2017]
+
+ done 	[Mon Jun 19 13:54:20 2017]
+CM:    	656/1700 = 38.58824
+ROOT:  	1634/1700 = 96.11765
+UAS:   	36693/40117 = 91.46496
+LAS:   	36693/40117 = 91.46496
+
+best UAS so far (a): 91.46496 [it = 31]
+
+***** Iteration #32 *****	[Mon Jun 19 13:54:31 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:54:53 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:55:14 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:55:36 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 13:55:57 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 13:56:18 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 13:56:40 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 13:57:01 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 13:57:22 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 13:57:44 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 13:58:05 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=32]	[Mon Jun 19 13:58:05 2017]
+
+instance num: 1700	[Mon Jun 19 13:58:36 2017]
+
+ done 	[Mon Jun 19 13:58:36 2017]
+CM:    	669/1700 = 39.35294
+ROOT:  	1633/1700 = 96.05882
+UAS:   	36688/40117 = 91.45250
+LAS:   	36688/40117 = 91.45250
+
+best UAS so far (a): 91.46496 [it = 31]
+
+***** Iteration #33 *****	[Mon Jun 19 13:58:36 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 13:58:58 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 13:59:19 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 13:59:40 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:00:02 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:00:23 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:00:44 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:01:06 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:01:28 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:01:53 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:02:18 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=33]	[Mon Jun 19 14:02:18 2017]
+
+instance num: 1700	[Mon Jun 19 14:02:51 2017]
+
+ done 	[Mon Jun 19 14:02:51 2017]
+CM:    	665/1700 = 39.11765
+ROOT:  	1637/1700 = 96.29412
+UAS:   	36725/40117 = 91.54473
+LAS:   	36725/40117 = 91.54473
+
+best UAS so far (a): 91.54473 [it = 33]
+
+***** Iteration #34 *****	[Mon Jun 19 14:03:03 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:03:26 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:03:48 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:04:11 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:04:34 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:04:57 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:05:19 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:05:41 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:06:03 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:06:26 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:06:48 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=34]	[Mon Jun 19 14:06:48 2017]
+
+instance num: 1700	[Mon Jun 19 14:07:21 2017]
+
+ done 	[Mon Jun 19 14:07:21 2017]
+CM:    	679/1700 = 39.94118
+ROOT:  	1628/1700 = 95.76471
+UAS:   	36801/40117 = 91.73418
+LAS:   	36801/40117 = 91.73418
+
+best UAS so far (a): 91.73418 [it = 34]
+
+***** Iteration #35 *****	[Mon Jun 19 14:07:32 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:07:55 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:08:16 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:08:39 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:09:01 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:09:23 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:09:46 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:10:08 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:10:31 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:10:57 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:11:19 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=35]	[Mon Jun 19 14:11:19 2017]
+
+instance num: 1700	[Mon Jun 19 14:11:53 2017]
+
+ done 	[Mon Jun 19 14:11:53 2017]
+CM:    	673/1700 = 39.58824
+ROOT:  	1633/1700 = 96.05882
+UAS:   	36724/40117 = 91.54224
+LAS:   	36724/40117 = 91.54224
+
+best UAS so far (a): 91.73418 [it = 34]
+
+***** Iteration #36 *****	[Mon Jun 19 14:11:53 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:12:16 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:12:39 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:13:00 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:13:23 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:13:46 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:14:09 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:14:31 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:14:53 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:15:14 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:15:36 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=36]	[Mon Jun 19 14:15:36 2017]
+
+instance num: 1700	[Mon Jun 19 14:16:10 2017]
+
+ done 	[Mon Jun 19 14:16:10 2017]
+CM:    	682/1700 = 40.11765
+ROOT:  	1636/1700 = 96.23529
+UAS:   	36764/40117 = 91.64195
+LAS:   	36764/40117 = 91.64195
+
+best UAS so far (a): 91.73418 [it = 34]
+
+***** Iteration #37 *****	[Mon Jun 19 14:16:10 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:16:33 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:16:57 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:17:21 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:17:48 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:18:12 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:18:33 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:18:57 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:19:19 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:19:42 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:20:04 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=37]	[Mon Jun 19 14:20:04 2017]
+
+instance num: 1700	[Mon Jun 19 14:20:37 2017]
+
+ done 	[Mon Jun 19 14:20:37 2017]
+CM:    	697/1700 = 41.00000
+ROOT:  	1638/1700 = 96.35294
+UAS:   	36765/40117 = 91.64444
+LAS:   	36765/40117 = 91.64444
+
+best UAS so far (a): 91.73418 [it = 34]
+
+***** Iteration #38 *****	[Mon Jun 19 14:20:37 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:21:00 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:21:22 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:21:44 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:22:08 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:22:32 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:22:54 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:23:17 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:23:39 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:24:01 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:24:23 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=38]	[Mon Jun 19 14:24:23 2017]
+
+instance num: 1700	[Mon Jun 19 14:24:56 2017]
+
+ done 	[Mon Jun 19 14:24:56 2017]
+CM:    	685/1700 = 40.29412
+ROOT:  	1644/1700 = 96.70588
+UAS:   	36821/40117 = 91.78403
+LAS:   	36821/40117 = 91.78403
+
+best UAS so far (a): 91.78403 [it = 38]
+
+***** Iteration #39 *****	[Mon Jun 19 14:25:07 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:25:30 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:25:52 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:26:15 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:26:36 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:26:59 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:27:22 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:27:44 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:28:06 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:28:28 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:28:51 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=39]	[Mon Jun 19 14:28:51 2017]
+
+instance num: 1700	[Mon Jun 19 14:29:24 2017]
+
+ done 	[Mon Jun 19 14:29:24 2017]
+CM:    	685/1700 = 40.29412
+ROOT:  	1644/1700 = 96.70588
+UAS:   	36802/40117 = 91.73667
+LAS:   	36802/40117 = 91.73667
+
+best UAS so far (a): 91.78403 [it = 38]
+
+***** Iteration #40 *****	[Mon Jun 19 14:29:24 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:29:47 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:30:09 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:30:31 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:30:53 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:31:15 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:31:37 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:31:59 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:32:22 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:32:44 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:33:08 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=40]	[Mon Jun 19 14:33:08 2017]
+
+instance num: 1700	[Mon Jun 19 14:33:44 2017]
+
+ done 	[Mon Jun 19 14:33:44 2017]
+CM:    	687/1700 = 40.41176
+ROOT:  	1639/1700 = 96.41176
+UAS:   	36813/40117 = 91.76409
+LAS:   	36813/40117 = 91.76409
+
+best UAS so far (a): 91.78403 [it = 38]
+
+***** Iteration #41 *****	[Mon Jun 19 14:33:44 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:34:09 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:34:33 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:34:58 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:35:21 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:35:44 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:36:06 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:36:29 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:36:52 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:37:15 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:37:38 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=41]	[Mon Jun 19 14:37:38 2017]
+
+instance num: 1700	[Mon Jun 19 14:38:13 2017]
+
+ done 	[Mon Jun 19 14:38:13 2017]
+CM:    	685/1700 = 40.29412
+ROOT:  	1640/1700 = 96.47059
+UAS:   	36793/40117 = 91.71424
+LAS:   	36793/40117 = 91.71424
+
+best UAS so far (a): 91.78403 [it = 38]
+
+***** Iteration #42 *****	[Mon Jun 19 14:38:13 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:38:36 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:38:58 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:39:21 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:39:43 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:40:06 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:40:28 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:40:50 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:41:13 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:41:37 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:42:00 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=42]	[Mon Jun 19 14:42:00 2017]
+
+instance num: 1700	[Mon Jun 19 14:42:35 2017]
+
+ done 	[Mon Jun 19 14:42:35 2017]
+CM:    	695/1700 = 40.88235
+ROOT:  	1639/1700 = 96.41176
+UAS:   	36808/40117 = 91.75163
+LAS:   	36808/40117 = 91.75163
+
+best UAS so far (a): 91.78403 [it = 38]
+
+***** Iteration #43 *****	[Mon Jun 19 14:42:35 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:42:59 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:43:21 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:43:44 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:44:06 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:44:29 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:44:51 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:45:13 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:45:36 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:45:59 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:46:21 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=43]	[Mon Jun 19 14:46:21 2017]
+
+instance num: 1700	[Mon Jun 19 14:46:56 2017]
+
+ done 	[Mon Jun 19 14:46:56 2017]
+CM:    	675/1700 = 39.70588
+ROOT:  	1644/1700 = 96.70588
+UAS:   	36772/40117 = 91.66189
+LAS:   	36772/40117 = 91.66189
+
+best UAS so far (a): 91.78403 [it = 38]
+
+***** Iteration #44 *****	[Mon Jun 19 14:46:56 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:47:19 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:47:42 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:48:04 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:48:27 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:48:49 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:49:12 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:49:35 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:49:58 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:50:21 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:50:48 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=44]	[Mon Jun 19 14:50:48 2017]
+
+instance num: 1700	[Mon Jun 19 14:51:23 2017]
+
+ done 	[Mon Jun 19 14:51:23 2017]
+CM:    	678/1700 = 39.88235
+ROOT:  	1641/1700 = 96.52941
+UAS:   	36791/40117 = 91.70925
+LAS:   	36791/40117 = 91.70925
+
+best UAS so far (a): 91.78403 [it = 38]
+
+***** Iteration #45 *****	[Mon Jun 19 14:51:23 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:51:47 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:52:10 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:52:33 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:52:55 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:53:17 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:53:38 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:54:01 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:54:23 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:54:45 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:55:07 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=45]	[Mon Jun 19 14:55:07 2017]
+
+instance num: 1700	[Mon Jun 19 14:55:41 2017]
+
+ done 	[Mon Jun 19 14:55:41 2017]
+CM:    	695/1700 = 40.88235
+ROOT:  	1642/1700 = 96.58824
+UAS:   	36816/40117 = 91.77157
+LAS:   	36816/40117 = 91.77157
+
+best UAS so far (a): 91.78403 [it = 38]
+
+***** Iteration #46 *****	[Mon Jun 19 14:55:41 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 14:56:04 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 14:56:26 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 14:56:49 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 14:57:12 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 14:57:35 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 14:57:58 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 14:58:21 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 14:58:43 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 14:59:06 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 14:59:28 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=46]	[Mon Jun 19 14:59:28 2017]
+
+instance num: 1700	[Mon Jun 19 15:00:02 2017]
+
+ done 	[Mon Jun 19 15:00:02 2017]
+CM:    	703/1700 = 41.35294
+ROOT:  	1645/1700 = 96.76471
+UAS:   	36827/40117 = 91.79899
+LAS:   	36827/40117 = 91.79899
+
+best UAS so far (a): 91.79899 [it = 46]
+
+***** Iteration #47 *****	[Mon Jun 19 15:00:13 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:00:36 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:00:58 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:01:21 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:01:43 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:02:06 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:02:28 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:02:54 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:03:15 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:03:37 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:04:00 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=47]	[Mon Jun 19 15:04:00 2017]
+
+instance num: 1700	[Mon Jun 19 15:04:34 2017]
+
+ done 	[Mon Jun 19 15:04:34 2017]
+CM:    	684/1700 = 40.23529
+ROOT:  	1643/1700 = 96.64706
+UAS:   	36843/40117 = 91.83887
+LAS:   	36843/40117 = 91.83887
+
+best UAS so far (a): 91.83887 [it = 47]
+
+***** Iteration #48 *****	[Mon Jun 19 15:04:45 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:05:08 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:05:30 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:05:52 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:06:14 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:06:37 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:06:59 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:07:22 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:07:46 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:08:09 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:08:31 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=48]	[Mon Jun 19 15:08:31 2017]
+
+instance num: 1700	[Mon Jun 19 15:09:05 2017]
+
+ done 	[Mon Jun 19 15:09:05 2017]
+CM:    	688/1700 = 40.47059
+ROOT:  	1638/1700 = 96.35294
+UAS:   	36839/40117 = 91.82890
+LAS:   	36839/40117 = 91.82890
+
+best UAS so far (a): 91.83887 [it = 47]
+
+***** Iteration #49 *****	[Mon Jun 19 15:09:05 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:09:28 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:09:50 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:10:12 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:10:34 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:10:56 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:11:24 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:11:46 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:12:08 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:12:30 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:12:52 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=49]	[Mon Jun 19 15:12:52 2017]
+
+instance num: 1700	[Mon Jun 19 15:13:26 2017]
+
+ done 	[Mon Jun 19 15:13:26 2017]
+CM:    	690/1700 = 40.58824
+ROOT:  	1622/1700 = 95.41176
+UAS:   	36836/40117 = 91.82142
+LAS:   	36836/40117 = 91.82142
+
+best UAS so far (a): 91.83887 [it = 47]
+
+***** Iteration #50 *****	[Mon Jun 19 15:13:26 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:13:47 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:14:10 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:14:32 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:14:54 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:15:17 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:15:39 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:16:01 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:16:26 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:16:48 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:17:10 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=50]	[Mon Jun 19 15:17:10 2017]
+
+instance num: 1700	[Mon Jun 19 15:17:43 2017]
+
+ done 	[Mon Jun 19 15:17:43 2017]
+CM:    	698/1700 = 41.05882
+ROOT:  	1646/1700 = 96.82353
+UAS:   	36871/40117 = 91.90867
+LAS:   	36871/40117 = 91.90867
+
+best UAS so far (a): 91.90867 [it = 50]
+
+***** Iteration #51 *****	[Mon Jun 19 15:17:55 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:18:18 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:18:41 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:19:03 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:19:26 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:19:49 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:20:15 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:20:37 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:20:59 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:21:22 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:21:43 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=51]	[Mon Jun 19 15:21:43 2017]
+
+instance num: 1700	[Mon Jun 19 15:22:17 2017]
+
+ done 	[Mon Jun 19 15:22:17 2017]
+CM:    	718/1700 = 42.23529
+ROOT:  	1641/1700 = 96.52941
+UAS:   	36910/40117 = 92.00588
+LAS:   	36910/40117 = 92.00588
+
+best UAS so far (a): 92.00588 [it = 51]
+
+***** Iteration #52 *****	[Mon Jun 19 15:22:28 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:22:50 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:23:12 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:23:34 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:23:55 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:24:17 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:24:41 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:25:05 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:25:27 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:25:50 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:26:12 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=52]	[Mon Jun 19 15:26:12 2017]
+
+instance num: 1700	[Mon Jun 19 15:26:45 2017]
+
+ done 	[Mon Jun 19 15:26:45 2017]
+CM:    	686/1700 = 40.35294
+ROOT:  	1643/1700 = 96.64706
+UAS:   	36837/40117 = 91.82392
+LAS:   	36837/40117 = 91.82392
+
+best UAS so far (a): 92.00588 [it = 51]
+
+***** Iteration #53 *****	[Mon Jun 19 15:26:45 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:27:07 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:27:30 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:27:51 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:28:14 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:28:35 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:28:57 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:29:19 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:29:41 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:30:04 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:30:26 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=53]	[Mon Jun 19 15:30:26 2017]
+
+instance num: 1700	[Mon Jun 19 15:31:01 2017]
+
+ done 	[Mon Jun 19 15:31:01 2017]
+CM:    	689/1700 = 40.52941
+ROOT:  	1642/1700 = 96.58824
+UAS:   	36839/40117 = 91.82890
+LAS:   	36839/40117 = 91.82890
+
+best UAS so far (a): 92.00588 [it = 51]
+
+***** Iteration #54 *****	[Mon Jun 19 15:31:01 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:31:23 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:31:46 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:32:09 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:32:32 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:32:53 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:33:16 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:33:38 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:34:00 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:34:23 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:34:46 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=54]	[Mon Jun 19 15:34:46 2017]
+
+instance num: 1700	[Mon Jun 19 15:35:20 2017]
+
+ done 	[Mon Jun 19 15:35:20 2017]
+CM:    	692/1700 = 40.70588
+ROOT:  	1648/1700 = 96.94118
+UAS:   	36843/40117 = 91.83887
+LAS:   	36843/40117 = 91.83887
+
+best UAS so far (a): 92.00588 [it = 51]
+
+***** Iteration #55 *****	[Mon Jun 19 15:35:20 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:35:43 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:36:06 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:36:28 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:36:50 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:37:14 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:37:38 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:38:01 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:38:23 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:38:46 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:39:08 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=55]	[Mon Jun 19 15:39:08 2017]
+
+instance num: 1700	[Mon Jun 19 15:39:41 2017]
+
+ done 	[Mon Jun 19 15:39:41 2017]
+CM:    	701/1700 = 41.23529
+ROOT:  	1646/1700 = 96.82353
+UAS:   	36875/40117 = 91.91864
+LAS:   	36875/40117 = 91.91864
+
+best UAS so far (a): 92.00588 [it = 51]
+
+***** Iteration #56 *****	[Mon Jun 19 15:39:41 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:40:03 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:40:25 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:40:47 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:41:09 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:41:31 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:41:55 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:42:18 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:42:40 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:43:03 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:43:26 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=56]	[Mon Jun 19 15:43:26 2017]
+
+instance num: 1700	[Mon Jun 19 15:44:00 2017]
+
+ done 	[Mon Jun 19 15:44:00 2017]
+CM:    	697/1700 = 41.00000
+ROOT:  	1643/1700 = 96.64706
+UAS:   	36895/40117 = 91.96849
+LAS:   	36895/40117 = 91.96849
+
+best UAS so far (a): 92.00588 [it = 51]
+
+***** Iteration #57 *****	[Mon Jun 19 15:44:00 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:44:23 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:44:45 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:45:09 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:45:31 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:45:54 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:46:17 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:46:39 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:47:02 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:47:25 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:47:48 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=57]	[Mon Jun 19 15:47:48 2017]
+
+instance num: 1700	[Mon Jun 19 15:48:22 2017]
+
+ done 	[Mon Jun 19 15:48:22 2017]
+CM:    	719/1700 = 42.29412
+ROOT:  	1642/1700 = 96.58824
+UAS:   	36933/40117 = 92.06322
+LAS:   	36933/40117 = 92.06322
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #58 *****	[Mon Jun 19 15:48:34 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:48:57 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:49:19 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:49:42 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:50:06 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:50:31 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:50:54 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:51:16 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:51:38 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:52:00 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:52:23 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=58]	[Mon Jun 19 15:52:23 2017]
+
+instance num: 1700	[Mon Jun 19 15:52:57 2017]
+
+ done 	[Mon Jun 19 15:52:57 2017]
+CM:    	692/1700 = 40.70588
+ROOT:  	1648/1700 = 96.94118
+UAS:   	36903/40117 = 91.98843
+LAS:   	36903/40117 = 91.98843
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #59 *****	[Mon Jun 19 15:52:57 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:53:20 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:53:42 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:54:05 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:54:27 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:54:49 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:55:11 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:55:33 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 15:55:56 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 15:56:18 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 15:56:40 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=59]	[Mon Jun 19 15:56:40 2017]
+
+instance num: 1700	[Mon Jun 19 15:57:15 2017]
+
+ done 	[Mon Jun 19 15:57:15 2017]
+CM:    	706/1700 = 41.52941
+ROOT:  	1649/1700 = 97.00000
+UAS:   	36882/40117 = 91.93609
+LAS:   	36882/40117 = 91.93609
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #60 *****	[Mon Jun 19 15:57:15 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 15:57:39 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 15:58:02 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 15:58:25 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 15:58:48 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 15:59:11 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 15:59:34 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 15:59:57 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:00:21 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:00:43 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:01:06 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=60]	[Mon Jun 19 16:01:06 2017]
+
+instance num: 1700	[Mon Jun 19 16:01:42 2017]
+
+ done 	[Mon Jun 19 16:01:42 2017]
+CM:    	694/1700 = 40.82353
+ROOT:  	1649/1700 = 97.00000
+UAS:   	36907/40117 = 91.99840
+LAS:   	36907/40117 = 91.99840
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #61 *****	[Mon Jun 19 16:01:42 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:02:06 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:02:29 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:02:52 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:03:15 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:03:39 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:04:04 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:04:26 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:04:48 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:05:10 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:05:32 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=61]	[Mon Jun 19 16:05:32 2017]
+
+instance num: 1700	[Mon Jun 19 16:06:05 2017]
+
+ done 	[Mon Jun 19 16:06:05 2017]
+CM:    	703/1700 = 41.35294
+ROOT:  	1643/1700 = 96.64706
+UAS:   	36882/40117 = 91.93609
+LAS:   	36882/40117 = 91.93609
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #62 *****	[Mon Jun 19 16:06:05 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:06:28 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:06:51 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:07:13 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:07:36 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:07:59 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:08:21 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:08:45 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:09:07 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:09:32 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:09:53 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=62]	[Mon Jun 19 16:09:53 2017]
+
+instance num: 1700	[Mon Jun 19 16:10:27 2017]
+
+ done 	[Mon Jun 19 16:10:27 2017]
+CM:    	695/1700 = 40.88235
+ROOT:  	1648/1700 = 96.94118
+UAS:   	36868/40117 = 91.90119
+LAS:   	36868/40117 = 91.90119
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #63 *****	[Mon Jun 19 16:10:27 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:10:49 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:11:11 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:11:35 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:11:58 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:12:23 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:12:45 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:13:09 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:13:31 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:13:54 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:14:17 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=63]	[Mon Jun 19 16:14:17 2017]
+
+instance num: 1700	[Mon Jun 19 16:14:52 2017]
+
+ done 	[Mon Jun 19 16:14:52 2017]
+CM:    	697/1700 = 41.00000
+ROOT:  	1641/1700 = 96.52941
+UAS:   	36920/40117 = 92.03081
+LAS:   	36920/40117 = 92.03081
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #64 *****	[Mon Jun 19 16:14:52 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:15:15 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:15:37 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:16:00 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:16:23 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:16:45 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:17:08 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:17:30 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:17:52 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:18:14 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:18:36 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=64]	[Mon Jun 19 16:18:36 2017]
+
+instance num: 1700	[Mon Jun 19 16:19:11 2017]
+
+ done 	[Mon Jun 19 16:19:11 2017]
+CM:    	680/1700 = 40.00000
+ROOT:  	1639/1700 = 96.41176
+UAS:   	36894/40117 = 91.96600
+LAS:   	36894/40117 = 91.96600
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #65 *****	[Mon Jun 19 16:19:11 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:19:34 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:19:56 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:20:19 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:20:41 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:21:05 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:21:31 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:21:54 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:22:16 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:22:39 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:23:03 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=65]	[Mon Jun 19 16:23:03 2017]
+
+instance num: 1700	[Mon Jun 19 16:23:38 2017]
+
+ done 	[Mon Jun 19 16:23:38 2017]
+CM:    	718/1700 = 42.23529
+ROOT:  	1645/1700 = 96.76471
+UAS:   	36917/40117 = 92.02333
+LAS:   	36917/40117 = 92.02333
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #66 *****	[Mon Jun 19 16:23:38 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:24:01 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:24:24 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:24:47 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:25:10 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:25:32 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:25:54 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:26:17 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:26:40 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:27:03 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:27:27 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=66]	[Mon Jun 19 16:27:27 2017]
+
+instance num: 1700	[Mon Jun 19 16:28:02 2017]
+
+ done 	[Mon Jun 19 16:28:02 2017]
+CM:    	702/1700 = 41.29412
+ROOT:  	1639/1700 = 96.41176
+UAS:   	36894/40117 = 91.96600
+LAS:   	36894/40117 = 91.96600
+
+best UAS so far (a): 92.06322 [it = 57]
+
+***** Iteration #67 *****	[Mon Jun 19 16:28:02 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:28:25 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:28:47 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:29:10 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:29:34 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:29:57 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:30:20 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:30:43 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:31:07 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:31:30 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:31:54 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=67]	[Mon Jun 19 16:31:54 2017]
+
+instance num: 1700	[Mon Jun 19 16:32:29 2017]
+
+ done 	[Mon Jun 19 16:32:29 2017]
+CM:    	725/1700 = 42.64706
+ROOT:  	1647/1700 = 96.88235
+UAS:   	36976/40117 = 92.17040
+LAS:   	36976/40117 = 92.17040
+
+best UAS so far (a): 92.17040 [it = 67]
+
+***** Iteration #68 *****	[Mon Jun 19 16:32:41 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:33:04 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:33:27 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:33:51 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:34:15 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:34:38 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:35:01 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:35:25 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:35:48 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:36:11 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:36:33 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=68]	[Mon Jun 19 16:36:33 2017]
+
+instance num: 1700	[Mon Jun 19 16:37:09 2017]
+
+ done 	[Mon Jun 19 16:37:09 2017]
+CM:    	709/1700 = 41.70588
+ROOT:  	1648/1700 = 96.94118
+UAS:   	36932/40117 = 92.06072
+LAS:   	36932/40117 = 92.06072
+
+best UAS so far (a): 92.17040 [it = 67]
+
+***** Iteration #69 *****	[Mon Jun 19 16:37:09 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:37:32 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:37:55 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:38:17 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:38:41 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:39:04 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:39:31 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:39:57 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:40:21 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:40:45 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:41:09 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=69]	[Mon Jun 19 16:41:09 2017]
+
+instance num: 1700	[Mon Jun 19 16:41:45 2017]
+
+ done 	[Mon Jun 19 16:41:45 2017]
+CM:    	705/1700 = 41.47059
+ROOT:  	1642/1700 = 96.58824
+UAS:   	36947/40117 = 92.09811
+LAS:   	36947/40117 = 92.09811
+
+best UAS so far (a): 92.17040 [it = 67]
+
+***** Iteration #70 *****	[Mon Jun 19 16:41:45 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:42:08 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:42:30 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:42:54 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:43:17 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:43:40 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:44:04 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:44:28 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:44:52 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:45:16 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:45:40 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=70]	[Mon Jun 19 16:45:40 2017]
+
+instance num: 1700	[Mon Jun 19 16:46:15 2017]
+
+ done 	[Mon Jun 19 16:46:15 2017]
+CM:    	713/1700 = 41.94118
+ROOT:  	1643/1700 = 96.64706
+UAS:   	36911/40117 = 92.00838
+LAS:   	36911/40117 = 92.00838
+
+best UAS so far (a): 92.17040 [it = 67]
+
+***** Iteration #71 *****	[Mon Jun 19 16:46:15 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:46:39 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:47:03 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:47:27 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:47:49 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:48:12 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:48:34 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:48:58 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:49:21 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:49:44 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:50:07 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=71]	[Mon Jun 19 16:50:07 2017]
+
+instance num: 1700	[Mon Jun 19 16:50:41 2017]
+
+ done 	[Mon Jun 19 16:50:41 2017]
+CM:    	716/1700 = 42.11765
+ROOT:  	1644/1700 = 96.70588
+UAS:   	36962/40117 = 92.13550
+LAS:   	36962/40117 = 92.13550
+
+best UAS so far (a): 92.17040 [it = 67]
+
+***** Iteration #72 *****	[Mon Jun 19 16:50:41 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:51:03 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:51:26 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:51:50 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:52:14 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:52:38 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:53:02 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:53:26 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:53:49 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:54:11 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:54:35 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=72]	[Mon Jun 19 16:54:35 2017]
+
+instance num: 1700	[Mon Jun 19 16:55:11 2017]
+
+ done 	[Mon Jun 19 16:55:11 2017]
+CM:    	720/1700 = 42.35294
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37031/40117 = 92.30750
+LAS:   	37031/40117 = 92.30750
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #73 *****	[Mon Jun 19 16:55:22 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 16:55:46 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 16:56:09 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 16:56:33 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 16:56:57 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 16:57:20 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 16:57:44 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 16:58:07 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 16:58:33 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 16:58:58 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 16:59:21 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=73]	[Mon Jun 19 16:59:21 2017]
+
+instance num: 1700	[Mon Jun 19 16:59:58 2017]
+
+ done 	[Mon Jun 19 16:59:58 2017]
+CM:    	708/1700 = 41.64706
+ROOT:  	1644/1700 = 96.70588
+UAS:   	36953/40117 = 92.11307
+LAS:   	36953/40117 = 92.11307
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #74 *****	[Mon Jun 19 16:59:58 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:00:21 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:00:45 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:01:08 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:01:31 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:01:53 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:02:15 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:02:37 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:03:01 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:03:24 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:03:47 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=74]	[Mon Jun 19 17:03:47 2017]
+
+instance num: 1700	[Mon Jun 19 17:04:21 2017]
+
+ done 	[Mon Jun 19 17:04:21 2017]
+CM:    	724/1700 = 42.58824
+ROOT:  	1646/1700 = 96.82353
+UAS:   	36979/40117 = 92.17788
+LAS:   	36979/40117 = 92.17788
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #75 *****	[Mon Jun 19 17:04:21 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:04:44 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:05:08 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:05:31 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:05:53 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:06:17 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:06:40 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:07:04 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:07:28 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:07:51 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:08:14 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=75]	[Mon Jun 19 17:08:14 2017]
+
+instance num: 1700	[Mon Jun 19 17:08:49 2017]
+
+ done 	[Mon Jun 19 17:08:49 2017]
+CM:    	715/1700 = 42.05882
+ROOT:  	1645/1700 = 96.76471
+UAS:   	36982/40117 = 92.18536
+LAS:   	36982/40117 = 92.18536
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #76 *****	[Mon Jun 19 17:08:49 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:09:12 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:09:35 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:09:58 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:10:21 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:10:43 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:11:06 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:11:28 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:11:50 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:12:12 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:12:35 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=76]	[Mon Jun 19 17:12:35 2017]
+
+instance num: 1700	[Mon Jun 19 17:13:10 2017]
+
+ done 	[Mon Jun 19 17:13:10 2017]
+CM:    	719/1700 = 42.29412
+ROOT:  	1643/1700 = 96.64706
+UAS:   	36958/40117 = 92.12553
+LAS:   	36958/40117 = 92.12553
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #77 *****	[Mon Jun 19 17:13:10 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:13:32 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:13:56 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:14:19 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:14:41 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:15:04 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:15:27 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:15:50 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:16:13 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:16:36 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:16:58 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=77]	[Mon Jun 19 17:16:58 2017]
+
+instance num: 1700	[Mon Jun 19 17:17:32 2017]
+
+ done 	[Mon Jun 19 17:17:32 2017]
+CM:    	715/1700 = 42.05882
+ROOT:  	1644/1700 = 96.70588
+UAS:   	36973/40117 = 92.16292
+LAS:   	36973/40117 = 92.16292
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #78 *****	[Mon Jun 19 17:17:32 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:17:58 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:18:26 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:18:54 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:19:16 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:19:39 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:20:01 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:20:24 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:20:46 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:21:09 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:21:32 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=78]	[Mon Jun 19 17:21:32 2017]
+
+instance num: 1700	[Mon Jun 19 17:22:07 2017]
+
+ done 	[Mon Jun 19 17:22:07 2017]
+CM:    	727/1700 = 42.76471
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37031/40117 = 92.30750
+LAS:   	37031/40117 = 92.30750
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #79 *****	[Mon Jun 19 17:22:07 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:22:30 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:22:53 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:23:16 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:23:38 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:24:01 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:24:24 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:24:46 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:25:09 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:25:30 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:25:53 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=79]	[Mon Jun 19 17:25:53 2017]
+
+instance num: 1700	[Mon Jun 19 17:26:26 2017]
+
+ done 	[Mon Jun 19 17:26:26 2017]
+CM:    	705/1700 = 41.47059
+ROOT:  	1651/1700 = 97.11765
+UAS:   	36967/40117 = 92.14797
+LAS:   	36967/40117 = 92.14797
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #80 *****	[Mon Jun 19 17:26:26 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:26:49 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:27:11 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:27:33 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:27:56 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:28:18 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:28:41 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:29:04 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:29:27 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:29:49 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:30:11 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=80]	[Mon Jun 19 17:30:11 2017]
+
+instance num: 1700	[Mon Jun 19 17:30:46 2017]
+
+ done 	[Mon Jun 19 17:30:46 2017]
+CM:    	708/1700 = 41.64706
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37001/40117 = 92.23272
+LAS:   	37001/40117 = 92.23272
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #81 *****	[Mon Jun 19 17:30:46 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:31:09 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:31:32 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:31:54 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:32:17 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:32:39 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:33:01 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:33:24 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:33:47 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:34:10 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:34:32 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=81]	[Mon Jun 19 17:34:32 2017]
+
+instance num: 1700	[Mon Jun 19 17:35:07 2017]
+
+ done 	[Mon Jun 19 17:35:07 2017]
+CM:    	718/1700 = 42.23529
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37009/40117 = 92.25266
+LAS:   	37009/40117 = 92.25266
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #82 *****	[Mon Jun 19 17:35:07 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:35:29 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:35:52 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:36:14 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:36:36 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:36:59 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:37:21 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:37:45 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:38:10 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:38:34 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:39:00 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=82]	[Mon Jun 19 17:39:00 2017]
+
+instance num: 1700	[Mon Jun 19 17:39:39 2017]
+
+ done 	[Mon Jun 19 17:39:39 2017]
+CM:    	721/1700 = 42.41176
+ROOT:  	1646/1700 = 96.82353
+UAS:   	36987/40117 = 92.19782
+LAS:   	36987/40117 = 92.19782
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #83 *****	[Mon Jun 19 17:39:39 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:40:03 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:40:27 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:40:50 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:41:13 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:41:37 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:42:01 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:42:24 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:42:48 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:43:11 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:43:33 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=83]	[Mon Jun 19 17:43:33 2017]
+
+instance num: 1700	[Mon Jun 19 17:44:07 2017]
+
+ done 	[Mon Jun 19 17:44:07 2017]
+CM:    	717/1700 = 42.17647
+ROOT:  	1652/1700 = 97.17647
+UAS:   	36998/40117 = 92.22524
+LAS:   	36998/40117 = 92.22524
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #84 *****	[Mon Jun 19 17:44:07 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:44:31 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:44:54 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:45:19 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:45:42 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:46:06 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:46:29 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:46:52 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:47:14 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:47:38 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:48:01 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=84]	[Mon Jun 19 17:48:01 2017]
+
+instance num: 1700	[Mon Jun 19 17:48:36 2017]
+
+ done 	[Mon Jun 19 17:48:36 2017]
+CM:    	702/1700 = 41.29412
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37000/40117 = 92.23023
+LAS:   	37000/40117 = 92.23023
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #85 *****	[Mon Jun 19 17:48:36 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:49:02 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:49:25 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:49:48 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:50:11 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:50:34 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:50:58 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:51:22 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:51:45 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:52:08 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:52:31 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=85]	[Mon Jun 19 17:52:31 2017]
+
+instance num: 1700	[Mon Jun 19 17:53:06 2017]
+
+ done 	[Mon Jun 19 17:53:06 2017]
+CM:    	726/1700 = 42.70588
+ROOT:  	1647/1700 = 96.88235
+UAS:   	36999/40117 = 92.22773
+LAS:   	36999/40117 = 92.22773
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #86 *****	[Mon Jun 19 17:53:06 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:53:28 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:53:50 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:54:14 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:54:37 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:54:59 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:55:22 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 17:55:45 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 17:56:07 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 17:56:30 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 17:56:52 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=86]	[Mon Jun 19 17:56:52 2017]
+
+instance num: 1700	[Mon Jun 19 17:57:26 2017]
+
+ done 	[Mon Jun 19 17:57:26 2017]
+CM:    	718/1700 = 42.23529
+ROOT:  	1648/1700 = 96.94118
+UAS:   	36979/40117 = 92.17788
+LAS:   	36979/40117 = 92.17788
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #87 *****	[Mon Jun 19 17:57:26 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 17:57:48 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 17:58:11 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 17:58:34 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 17:58:57 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 17:59:20 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 17:59:43 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:00:06 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:00:31 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:00:54 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:01:16 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=87]	[Mon Jun 19 18:01:16 2017]
+
+instance num: 1700	[Mon Jun 19 18:01:51 2017]
+
+ done 	[Mon Jun 19 18:01:51 2017]
+CM:    	699/1700 = 41.11765
+ROOT:  	1648/1700 = 96.94118
+UAS:   	36963/40117 = 92.13800
+LAS:   	36963/40117 = 92.13800
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #88 *****	[Mon Jun 19 18:01:51 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:02:13 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:02:36 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:02:59 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:03:20 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:03:43 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:04:06 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:04:29 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:04:51 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:05:13 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:05:35 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=88]	[Mon Jun 19 18:05:35 2017]
+
+instance num: 1700	[Mon Jun 19 18:06:09 2017]
+
+ done 	[Mon Jun 19 18:06:09 2017]
+CM:    	707/1700 = 41.58824
+ROOT:  	1644/1700 = 96.70588
+UAS:   	36952/40117 = 92.11058
+LAS:   	36952/40117 = 92.11058
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #89 *****	[Mon Jun 19 18:06:09 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:06:32 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:06:55 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:07:17 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:07:39 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:08:01 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:08:24 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:08:47 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:09:11 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:09:34 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:09:58 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=89]	[Mon Jun 19 18:09:58 2017]
+
+instance num: 1700	[Mon Jun 19 18:10:34 2017]
+
+ done 	[Mon Jun 19 18:10:34 2017]
+CM:    	720/1700 = 42.35294
+ROOT:  	1645/1700 = 96.76471
+UAS:   	36978/40117 = 92.17539
+LAS:   	36978/40117 = 92.17539
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #90 *****	[Mon Jun 19 18:10:34 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:10:58 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:11:21 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:11:44 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:12:08 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:12:32 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:12:56 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:13:20 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:13:43 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:14:07 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:14:30 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=90]	[Mon Jun 19 18:14:30 2017]
+
+instance num: 1700	[Mon Jun 19 18:15:05 2017]
+
+ done 	[Mon Jun 19 18:15:05 2017]
+CM:    	716/1700 = 42.11765
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37015/40117 = 92.26762
+LAS:   	37015/40117 = 92.26762
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #91 *****	[Mon Jun 19 18:15:05 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:15:27 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:15:49 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:16:11 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:16:34 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:16:56 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:17:20 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:17:43 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:18:07 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:18:30 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:18:54 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=91]	[Mon Jun 19 18:18:54 2017]
+
+instance num: 1700	[Mon Jun 19 18:19:29 2017]
+
+ done 	[Mon Jun 19 18:19:29 2017]
+CM:    	732/1700 = 43.05882
+ROOT:  	1643/1700 = 96.64706
+UAS:   	37021/40117 = 92.28257
+LAS:   	37021/40117 = 92.28257
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #92 *****	[Mon Jun 19 18:19:29 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:19:52 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:20:16 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:20:39 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:21:03 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:21:31 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:21:58 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:22:22 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:22:45 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:23:08 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:23:31 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=92]	[Mon Jun 19 18:23:31 2017]
+
+instance num: 1700	[Mon Jun 19 18:24:07 2017]
+
+ done 	[Mon Jun 19 18:24:07 2017]
+CM:    	726/1700 = 42.70588
+ROOT:  	1645/1700 = 96.76471
+UAS:   	37018/40117 = 92.27510
+LAS:   	37018/40117 = 92.27510
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #93 *****	[Mon Jun 19 18:24:07 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:24:30 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:24:54 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:25:18 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:25:42 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:26:05 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:26:27 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:26:50 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:27:13 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:27:37 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:28:00 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=93]	[Mon Jun 19 18:28:00 2017]
+
+instance num: 1700	[Mon Jun 19 18:28:36 2017]
+
+ done 	[Mon Jun 19 18:28:36 2017]
+CM:    	715/1700 = 42.05882
+ROOT:  	1650/1700 = 97.05882
+UAS:   	36994/40117 = 92.21527
+LAS:   	36994/40117 = 92.21527
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #94 *****	[Mon Jun 19 18:28:36 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:29:01 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:29:25 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:29:48 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:30:11 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:30:33 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:30:57 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:31:21 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:31:46 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:32:08 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:32:32 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=94]	[Mon Jun 19 18:32:32 2017]
+
+instance num: 1700	[Mon Jun 19 18:33:07 2017]
+
+ done 	[Mon Jun 19 18:33:07 2017]
+CM:    	719/1700 = 42.29412
+ROOT:  	1648/1700 = 96.94118
+UAS:   	37021/40117 = 92.28257
+LAS:   	37021/40117 = 92.28257
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #95 *****	[Mon Jun 19 18:33:07 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:33:31 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:33:54 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:34:17 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:34:39 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:35:03 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:35:26 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:35:49 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:36:12 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:36:35 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:36:59 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=95]	[Mon Jun 19 18:36:59 2017]
+
+instance num: 1700	[Mon Jun 19 18:37:34 2017]
+
+ done 	[Mon Jun 19 18:37:34 2017]
+CM:    	718/1700 = 42.23529
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37012/40117 = 92.26014
+LAS:   	37012/40117 = 92.26014
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #96 *****	[Mon Jun 19 18:37:34 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:37:58 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:38:22 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:38:45 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:39:10 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:39:34 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:39:57 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:40:20 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:40:41 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:41:05 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:41:30 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=96]	[Mon Jun 19 18:41:30 2017]
+
+instance num: 1700	[Mon Jun 19 18:42:06 2017]
+
+ done 	[Mon Jun 19 18:42:06 2017]
+CM:    	720/1700 = 42.35294
+ROOT:  	1637/1700 = 96.29412
+UAS:   	36968/40117 = 92.15046
+LAS:   	36968/40117 = 92.15046
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #97 *****	[Mon Jun 19 18:42:06 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:42:30 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:42:56 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:43:21 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:43:44 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:44:07 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:44:30 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:44:54 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:45:16 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:45:39 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:46:03 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=97]	[Mon Jun 19 18:46:03 2017]
+
+instance num: 1700	[Mon Jun 19 18:46:39 2017]
+
+ done 	[Mon Jun 19 18:46:39 2017]
+CM:    	726/1700 = 42.70588
+ROOT:  	1643/1700 = 96.64706
+UAS:   	37031/40117 = 92.30750
+LAS:   	37031/40117 = 92.30750
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #98 *****	[Mon Jun 19 18:46:39 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:47:01 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:47:26 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:47:49 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:48:12 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:48:36 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:48:59 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:49:22 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:49:46 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:50:10 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:50:33 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=98]	[Mon Jun 19 18:50:33 2017]
+
+instance num: 1700	[Mon Jun 19 18:51:09 2017]
+
+ done 	[Mon Jun 19 18:51:09 2017]
+CM:    	733/1700 = 43.11765
+ROOT:  	1644/1700 = 96.70588
+UAS:   	37004/40117 = 92.24020
+LAS:   	37004/40117 = 92.24020
+
+best UAS so far (a): 92.30750 [it = 72]
+
+***** Iteration #99 *****	[Mon Jun 19 18:51:09 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:51:33 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:51:56 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:52:20 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:52:44 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:53:09 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:53:32 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:53:55 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:54:19 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:54:43 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:55:06 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=99]	[Mon Jun 19 18:55:06 2017]
+
+instance num: 1700	[Mon Jun 19 18:55:41 2017]
+
+ done 	[Mon Jun 19 18:55:41 2017]
+CM:    	728/1700 = 42.82353
+ROOT:  	1645/1700 = 96.76471
+UAS:   	37037/40117 = 92.32246
+LAS:   	37037/40117 = 92.32246
+
+best UAS so far (a): 92.32246 [it = 99]
+
+***** Iteration #100 *****	[Mon Jun 19 18:55:52 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 18:56:16 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 18:56:41 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 18:57:04 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 18:57:28 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 18:57:52 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 18:58:14 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 18:58:37 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 18:59:00 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 18:59:23 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 18:59:46 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=100]	[Mon Jun 19 18:59:46 2017]
+
+instance num: 1700	[Mon Jun 19 19:00:22 2017]
+
+ done 	[Mon Jun 19 19:00:22 2017]
+CM:    	730/1700 = 42.94118
+ROOT:  	1644/1700 = 96.70588
+UAS:   	36993/40117 = 92.21278
+LAS:   	36993/40117 = 92.21278
+
+best UAS so far (a): 92.32246 [it = 99]
+
+***** Iteration #101 *****	[Mon Jun 19 19:00:22 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:00:46 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:01:09 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:01:33 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:01:57 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:02:20 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:02:43 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:03:09 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:03:36 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:04:01 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:04:24 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=101]	[Mon Jun 19 19:04:24 2017]
+
+instance num: 1700	[Mon Jun 19 19:04:59 2017]
+
+ done 	[Mon Jun 19 19:04:59 2017]
+CM:    	726/1700 = 42.70588
+ROOT:  	1645/1700 = 96.76471
+UAS:   	37053/40117 = 92.36234
+LAS:   	37053/40117 = 92.36234
+
+best UAS so far (a): 92.36234 [it = 101]
+
+***** Iteration #102 *****	[Mon Jun 19 19:05:11 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:05:35 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:05:57 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:06:21 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:06:45 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:07:10 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:07:33 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:07:56 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:08:20 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:08:43 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:09:06 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=102]	[Mon Jun 19 19:09:06 2017]
+
+instance num: 1700	[Mon Jun 19 19:09:41 2017]
+
+ done 	[Mon Jun 19 19:09:41 2017]
+CM:    	729/1700 = 42.88235
+ROOT:  	1653/1700 = 97.23529
+UAS:   	37036/40117 = 92.31996
+LAS:   	37036/40117 = 92.31996
+
+best UAS so far (a): 92.36234 [it = 101]
+
+***** Iteration #103 *****	[Mon Jun 19 19:09:41 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:10:04 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:10:28 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:10:52 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:11:15 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:11:39 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:12:03 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:12:28 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:12:52 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:13:17 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:13:41 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=103]	[Mon Jun 19 19:13:41 2017]
+
+instance num: 1700	[Mon Jun 19 19:14:17 2017]
+
+ done 	[Mon Jun 19 19:14:17 2017]
+CM:    	731/1700 = 43.00000
+ROOT:  	1651/1700 = 97.11765
+UAS:   	37064/40117 = 92.38976
+LAS:   	37064/40117 = 92.38976
+
+best UAS so far (a): 92.38976 [it = 103]
+
+***** Iteration #104 *****	[Mon Jun 19 19:14:29 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:14:54 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:15:17 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:15:42 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:16:06 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:16:31 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:16:54 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:17:18 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:17:41 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:18:04 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:18:27 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=104]	[Mon Jun 19 19:18:27 2017]
+
+instance num: 1700	[Mon Jun 19 19:19:03 2017]
+
+ done 	[Mon Jun 19 19:19:03 2017]
+CM:    	736/1700 = 43.29412
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37014/40117 = 92.26512
+LAS:   	37014/40117 = 92.26512
+
+best UAS so far (a): 92.38976 [it = 103]
+
+***** Iteration #105 *****	[Mon Jun 19 19:19:03 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:19:27 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:19:51 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:20:15 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:20:38 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:21:03 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:21:27 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:21:50 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:22:14 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:22:38 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:23:03 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=105]	[Mon Jun 19 19:23:03 2017]
+
+instance num: 1700	[Mon Jun 19 19:23:39 2017]
+
+ done 	[Mon Jun 19 19:23:39 2017]
+CM:    	737/1700 = 43.35294
+ROOT:  	1645/1700 = 96.76471
+UAS:   	37072/40117 = 92.40970
+LAS:   	37072/40117 = 92.40970
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #106 *****	[Mon Jun 19 19:23:52 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:24:17 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:24:40 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:25:05 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:25:28 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:25:53 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:26:17 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:26:41 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:27:05 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:27:30 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:27:58 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=106]	[Mon Jun 19 19:27:58 2017]
+
+instance num: 1700	[Mon Jun 19 19:28:36 2017]
+
+ done 	[Mon Jun 19 19:28:36 2017]
+CM:    	729/1700 = 42.88235
+ROOT:  	1643/1700 = 96.64706
+UAS:   	37038/40117 = 92.32495
+LAS:   	37038/40117 = 92.32495
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #107 *****	[Mon Jun 19 19:28:36 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:29:02 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:29:26 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:29:51 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:30:15 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:30:39 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:31:03 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:31:27 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:31:51 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:32:15 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:32:40 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=107]	[Mon Jun 19 19:32:40 2017]
+
+instance num: 1700	[Mon Jun 19 19:33:16 2017]
+
+ done 	[Mon Jun 19 19:33:16 2017]
+CM:    	743/1700 = 43.70588
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37061/40117 = 92.38228
+LAS:   	37061/40117 = 92.38228
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #108 *****	[Mon Jun 19 19:33:16 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:33:41 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:34:04 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:34:28 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:34:51 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:35:15 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:35:39 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:36:02 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:36:26 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:36:50 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:37:14 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=108]	[Mon Jun 19 19:37:14 2017]
+
+instance num: 1700	[Mon Jun 19 19:37:50 2017]
+
+ done 	[Mon Jun 19 19:37:50 2017]
+CM:    	743/1700 = 43.70588
+ROOT:  	1644/1700 = 96.70588
+UAS:   	37043/40117 = 92.33741
+LAS:   	37043/40117 = 92.33741
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #109 *****	[Mon Jun 19 19:37:50 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:38:15 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:38:39 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:39:02 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:39:25 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:39:49 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:40:14 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:40:37 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:41:01 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:41:24 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:41:47 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=109]	[Mon Jun 19 19:41:47 2017]
+
+instance num: 1700	[Mon Jun 19 19:42:24 2017]
+
+ done 	[Mon Jun 19 19:42:24 2017]
+CM:    	738/1700 = 43.41176
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37047/40117 = 92.34738
+LAS:   	37047/40117 = 92.34738
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #110 *****	[Mon Jun 19 19:42:24 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:42:49 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:43:12 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:43:36 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:44:01 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:44:24 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:44:47 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:45:11 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:45:36 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:45:59 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:46:22 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=110]	[Mon Jun 19 19:46:22 2017]
+
+instance num: 1700	[Mon Jun 19 19:46:57 2017]
+
+ done 	[Mon Jun 19 19:46:57 2017]
+CM:    	738/1700 = 43.41176
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37040/40117 = 92.32993
+LAS:   	37040/40117 = 92.32993
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #111 *****	[Mon Jun 19 19:46:57 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:47:22 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:47:44 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:48:08 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:48:32 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:48:55 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:49:19 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:49:42 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:50:04 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:50:28 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:50:51 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=111]	[Mon Jun 19 19:50:51 2017]
+
+instance num: 1700	[Mon Jun 19 19:51:26 2017]
+
+ done 	[Mon Jun 19 19:51:26 2017]
+CM:    	738/1700 = 43.41176
+ROOT:  	1648/1700 = 96.94118
+UAS:   	37034/40117 = 92.31498
+LAS:   	37034/40117 = 92.31498
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #112 *****	[Mon Jun 19 19:51:26 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:51:49 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:52:13 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:52:36 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:53:00 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:53:24 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:53:49 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:54:16 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:54:42 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:55:10 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 19:55:34 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=112]	[Mon Jun 19 19:55:34 2017]
+
+instance num: 1700	[Mon Jun 19 19:56:12 2017]
+
+ done 	[Mon Jun 19 19:56:12 2017]
+CM:    	734/1700 = 43.17647
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37060/40117 = 92.37979
+LAS:   	37060/40117 = 92.37979
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #113 *****	[Mon Jun 19 19:56:12 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 19:56:36 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 19:56:59 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 19:57:24 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 19:57:49 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 19:58:14 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 19:58:40 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 19:59:04 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 19:59:28 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 19:59:51 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:00:15 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=113]	[Mon Jun 19 20:00:15 2017]
+
+instance num: 1700	[Mon Jun 19 20:00:51 2017]
+
+ done 	[Mon Jun 19 20:00:51 2017]
+CM:    	727/1700 = 42.76471
+ROOT:  	1648/1700 = 96.94118
+UAS:   	37060/40117 = 92.37979
+LAS:   	37060/40117 = 92.37979
+
+best UAS so far (a): 92.40970 [it = 105]
+
+***** Iteration #114 *****	[Mon Jun 19 20:00:51 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:01:14 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:01:39 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:02:01 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:02:25 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:02:48 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:03:12 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:03:35 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:04:00 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:04:23 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:04:46 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=114]	[Mon Jun 19 20:04:46 2017]
+
+instance num: 1700	[Mon Jun 19 20:05:23 2017]
+
+ done 	[Mon Jun 19 20:05:23 2017]
+CM:    	740/1700 = 43.52941
+ROOT:  	1645/1700 = 96.76471
+UAS:   	37086/40117 = 92.44460
+LAS:   	37086/40117 = 92.44460
+
+best UAS so far (a): 92.44460 [it = 114]
+
+***** Iteration #115 *****	[Mon Jun 19 20:05:35 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:06:00 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:06:24 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:06:48 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:07:11 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:07:34 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:07:56 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:08:20 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:08:43 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:09:07 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:09:31 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=115]	[Mon Jun 19 20:09:31 2017]
+
+instance num: 1700	[Mon Jun 19 20:10:06 2017]
+
+ done 	[Mon Jun 19 20:10:06 2017]
+CM:    	733/1700 = 43.11765
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37054/40117 = 92.36483
+LAS:   	37054/40117 = 92.36483
+
+best UAS so far (a): 92.44460 [it = 114]
+
+***** Iteration #116 *****	[Mon Jun 19 20:10:06 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:10:28 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:10:51 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:11:15 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:11:38 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:12:03 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:12:27 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:12:51 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:13:15 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:13:38 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:14:02 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=116]	[Mon Jun 19 20:14:02 2017]
+
+instance num: 1700	[Mon Jun 19 20:14:39 2017]
+
+ done 	[Mon Jun 19 20:14:39 2017]
+CM:    	732/1700 = 43.05882
+ROOT:  	1648/1700 = 96.94118
+UAS:   	37070/40117 = 92.40472
+LAS:   	37070/40117 = 92.40472
+
+best UAS so far (a): 92.44460 [it = 114]
+
+***** Iteration #117 *****	[Mon Jun 19 20:14:39 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:15:04 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:15:29 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:15:54 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:16:17 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:16:42 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:17:05 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:17:29 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:17:54 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:18:17 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:18:38 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=117]	[Mon Jun 19 20:18:38 2017]
+
+instance num: 1700	[Mon Jun 19 20:19:15 2017]
+
+ done 	[Mon Jun 19 20:19:15 2017]
+CM:    	731/1700 = 43.00000
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37073/40117 = 92.41219
+LAS:   	37073/40117 = 92.41219
+
+best UAS so far (a): 92.44460 [it = 114]
+
+***** Iteration #118 *****	[Mon Jun 19 20:19:15 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:19:39 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:20:02 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:20:26 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:20:49 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:21:13 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:21:36 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:22:00 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:22:24 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:22:48 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:23:13 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=118]	[Mon Jun 19 20:23:13 2017]
+
+instance num: 1700	[Mon Jun 19 20:23:51 2017]
+
+ done 	[Mon Jun 19 20:23:51 2017]
+CM:    	751/1700 = 44.17647
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37071/40117 = 92.40721
+LAS:   	37071/40117 = 92.40721
+
+best UAS so far (a): 92.44460 [it = 114]
+
+***** Iteration #119 *****	[Mon Jun 19 20:23:51 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:24:19 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:24:47 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:25:11 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:25:35 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:25:59 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:26:22 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:26:46 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:27:11 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:27:34 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:27:57 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=119]	[Mon Jun 19 20:27:57 2017]
+
+instance num: 1700	[Mon Jun 19 20:28:32 2017]
+
+ done 	[Mon Jun 19 20:28:32 2017]
+CM:    	747/1700 = 43.94118
+ROOT:  	1651/1700 = 97.11765
+UAS:   	37113/40117 = 92.51190
+LAS:   	37113/40117 = 92.51190
+
+best UAS so far (a): 92.51190 [it = 119]
+
+***** Iteration #120 *****	[Mon Jun 19 20:28:43 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:29:06 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:29:30 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:29:53 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:30:17 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:30:40 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:31:04 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:31:27 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:31:51 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:32:16 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:32:40 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=120]	[Mon Jun 19 20:32:40 2017]
+
+instance num: 1700	[Mon Jun 19 20:33:16 2017]
+
+ done 	[Mon Jun 19 20:33:16 2017]
+CM:    	747/1700 = 43.94118
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37114/40117 = 92.51440
+LAS:   	37114/40117 = 92.51440
+
+best UAS so far (a): 92.51440 [it = 120]
+
+***** Iteration #121 *****	[Mon Jun 19 20:33:28 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:33:53 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:34:16 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:34:40 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:35:05 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:35:29 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:35:54 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:36:18 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:36:43 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:37:07 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:37:30 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=121]	[Mon Jun 19 20:37:30 2017]
+
+instance num: 1700	[Mon Jun 19 20:38:06 2017]
+
+ done 	[Mon Jun 19 20:38:06 2017]
+CM:    	750/1700 = 44.11765
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37109/40117 = 92.50193
+LAS:   	37109/40117 = 92.50193
+
+best UAS so far (a): 92.51440 [it = 120]
+
+***** Iteration #122 *****	[Mon Jun 19 20:38:06 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:38:28 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:38:51 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:39:15 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:39:40 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:40:05 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:40:30 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:40:54 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:41:17 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:41:40 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:42:03 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=122]	[Mon Jun 19 20:42:03 2017]
+
+instance num: 1700	[Mon Jun 19 20:42:39 2017]
+
+ done 	[Mon Jun 19 20:42:39 2017]
+CM:    	757/1700 = 44.52941
+ROOT:  	1648/1700 = 96.94118
+UAS:   	37118/40117 = 92.52437
+LAS:   	37118/40117 = 92.52437
+
+best UAS so far (a): 92.52437 [it = 122]
+
+***** Iteration #123 *****	[Mon Jun 19 20:42:51 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:43:16 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:43:41 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:44:05 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:44:29 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:44:54 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:45:18 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:45:42 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:46:05 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:46:29 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:46:51 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=123]	[Mon Jun 19 20:46:51 2017]
+
+instance num: 1700	[Mon Jun 19 20:47:27 2017]
+
+ done 	[Mon Jun 19 20:47:27 2017]
+CM:    	751/1700 = 44.17647
+ROOT:  	1651/1700 = 97.11765
+UAS:   	37078/40117 = 92.42466
+LAS:   	37078/40117 = 92.42466
+
+best UAS so far (a): 92.52437 [it = 122]
+
+***** Iteration #124 *****	[Mon Jun 19 20:47:27 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:47:49 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:48:13 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:48:35 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:48:58 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:49:21 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:49:45 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:50:08 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:50:32 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:50:55 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:51:18 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=124]	[Mon Jun 19 20:51:18 2017]
+
+instance num: 1700	[Mon Jun 19 20:51:54 2017]
+
+ done 	[Mon Jun 19 20:51:54 2017]
+CM:    	754/1700 = 44.35294
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37118/40117 = 92.52437
+LAS:   	37118/40117 = 92.52437
+
+best UAS so far (a): 92.52437 [it = 122]
+
+***** Iteration #125 *****	[Mon Jun 19 20:51:54 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:52:16 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:52:39 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:53:01 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:53:23 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:53:46 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:54:08 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:54:29 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:54:51 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:55:13 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 20:55:36 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=125]	[Mon Jun 19 20:55:36 2017]
+
+instance num: 1700	[Mon Jun 19 20:56:10 2017]
+
+ done 	[Mon Jun 19 20:56:10 2017]
+CM:    	744/1700 = 43.76471
+ROOT:  	1651/1700 = 97.11765
+UAS:   	37123/40117 = 92.53683
+LAS:   	37123/40117 = 92.53683
+
+best UAS so far (a): 92.53683 [it = 125]
+
+***** Iteration #126 *****	[Mon Jun 19 20:56:21 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 20:56:44 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 20:57:06 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 20:57:29 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 20:57:51 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 20:58:13 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 20:58:35 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 20:58:58 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 20:59:20 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 20:59:41 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:00:03 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=126]	[Mon Jun 19 21:00:03 2017]
+
+instance num: 1700	[Mon Jun 19 21:00:36 2017]
+
+ done 	[Mon Jun 19 21:00:36 2017]
+CM:    	748/1700 = 44.00000
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37141/40117 = 92.58170
+LAS:   	37141/40117 = 92.58170
+
+best UAS so far (a): 92.58170 [it = 126]
+
+***** Iteration #127 *****	[Mon Jun 19 21:00:48 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:01:10 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:01:32 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:01:55 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:02:17 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:02:38 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:03:00 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:03:22 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:03:44 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:04:06 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:04:29 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=127]	[Mon Jun 19 21:04:29 2017]
+
+instance num: 1700	[Mon Jun 19 21:05:02 2017]
+
+ done 	[Mon Jun 19 21:05:02 2017]
+CM:    	746/1700 = 43.88235
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37111/40117 = 92.50692
+LAS:   	37111/40117 = 92.50692
+
+best UAS so far (a): 92.58170 [it = 126]
+
+***** Iteration #128 *****	[Mon Jun 19 21:05:02 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:05:25 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:05:47 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:06:09 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:06:32 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:06:55 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:07:17 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:07:39 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:08:02 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:08:25 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:08:47 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=128]	[Mon Jun 19 21:08:47 2017]
+
+instance num: 1700	[Mon Jun 19 21:09:22 2017]
+
+ done 	[Mon Jun 19 21:09:22 2017]
+CM:    	765/1700 = 45.00000
+ROOT:  	1651/1700 = 97.11765
+UAS:   	37116/40117 = 92.51938
+LAS:   	37116/40117 = 92.51938
+
+best UAS so far (a): 92.58170 [it = 126]
+
+***** Iteration #129 *****	[Mon Jun 19 21:09:22 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:09:44 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:10:06 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:10:29 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:10:52 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:11:15 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:11:38 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:12:01 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:12:23 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:12:45 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:13:07 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=129]	[Mon Jun 19 21:13:07 2017]
+
+instance num: 1700	[Mon Jun 19 21:13:40 2017]
+
+ done 	[Mon Jun 19 21:13:40 2017]
+CM:    	751/1700 = 44.17647
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37134/40117 = 92.56425
+LAS:   	37134/40117 = 92.56425
+
+best UAS so far (a): 92.58170 [it = 126]
+
+***** Iteration #130 *****	[Mon Jun 19 21:13:40 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:14:03 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:14:25 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:14:47 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:15:10 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:15:32 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:15:55 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:16:17 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:16:40 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:17:02 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:17:24 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=130]	[Mon Jun 19 21:17:24 2017]
+
+instance num: 1700	[Mon Jun 19 21:17:58 2017]
+
+ done 	[Mon Jun 19 21:17:58 2017]
+CM:    	751/1700 = 44.17647
+ROOT:  	1648/1700 = 96.94118
+UAS:   	37109/40117 = 92.50193
+LAS:   	37109/40117 = 92.50193
+
+best UAS so far (a): 92.58170 [it = 126]
+
+***** Iteration #131 *****	[Mon Jun 19 21:17:58 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:18:21 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:18:43 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:19:05 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:19:27 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:19:50 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:20:12 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:20:34 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:20:56 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:21:18 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:21:42 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=131]	[Mon Jun 19 21:21:42 2017]
+
+instance num: 1700	[Mon Jun 19 21:22:16 2017]
+
+ done 	[Mon Jun 19 21:22:16 2017]
+CM:    	763/1700 = 44.88235
+ROOT:  	1641/1700 = 96.52941
+UAS:   	37152/40117 = 92.60912
+LAS:   	37152/40117 = 92.60912
+
+best UAS so far (a): 92.60912 [it = 131]
+
+***** Iteration #132 *****	[Mon Jun 19 21:22:28 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:22:50 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:23:12 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:23:35 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:23:57 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:24:19 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:24:42 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:25:04 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:25:26 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:25:49 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:26:10 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=132]	[Mon Jun 19 21:26:10 2017]
+
+instance num: 1700	[Mon Jun 19 21:26:44 2017]
+
+ done 	[Mon Jun 19 21:26:44 2017]
+CM:    	750/1700 = 44.11765
+ROOT:  	1648/1700 = 96.94118
+UAS:   	37121/40117 = 92.53184
+LAS:   	37121/40117 = 92.53184
+
+best UAS so far (a): 92.60912 [it = 131]
+
+***** Iteration #133 *****	[Mon Jun 19 21:26:44 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:27:06 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:27:29 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:27:51 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:28:14 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:28:36 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:28:58 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:29:20 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:29:42 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:30:04 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:30:26 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=133]	[Mon Jun 19 21:30:26 2017]
+
+instance num: 1700	[Mon Jun 19 21:30:59 2017]
+
+ done 	[Mon Jun 19 21:30:59 2017]
+CM:    	744/1700 = 43.76471
+ROOT:  	1644/1700 = 96.70588
+UAS:   	37104/40117 = 92.48947
+LAS:   	37104/40117 = 92.48947
+
+best UAS so far (a): 92.60912 [it = 131]
+
+***** Iteration #134 *****	[Mon Jun 19 21:30:59 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:31:22 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:31:43 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:32:06 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:32:29 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:32:51 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:33:13 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:33:36 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:33:58 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:34:20 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:34:42 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=134]	[Mon Jun 19 21:34:42 2017]
+
+instance num: 1700	[Mon Jun 19 21:35:16 2017]
+
+ done 	[Mon Jun 19 21:35:16 2017]
+CM:    	750/1700 = 44.11765
+ROOT:  	1644/1700 = 96.70588
+UAS:   	37145/40117 = 92.59167
+LAS:   	37145/40117 = 92.59167
+
+best UAS so far (a): 92.60912 [it = 131]
+
+***** Iteration #135 *****	[Mon Jun 19 21:35:16 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:35:38 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:36:00 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:36:22 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:36:44 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:37:07 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:37:29 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:37:51 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:38:13 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:38:36 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:38:58 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=135]	[Mon Jun 19 21:38:58 2017]
+
+instance num: 1700	[Mon Jun 19 21:39:32 2017]
+
+ done 	[Mon Jun 19 21:39:32 2017]
+CM:    	756/1700 = 44.47059
+ROOT:  	1644/1700 = 96.70588
+UAS:   	37132/40117 = 92.55926
+LAS:   	37132/40117 = 92.55926
+
+best UAS so far (a): 92.60912 [it = 131]
+
+***** Iteration #136 *****	[Mon Jun 19 21:39:32 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:39:54 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:40:16 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:40:37 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:41:00 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:41:22 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:41:45 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:42:07 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:42:28 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:42:50 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:43:12 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=136]	[Mon Jun 19 21:43:12 2017]
+
+instance num: 1700	[Mon Jun 19 21:43:46 2017]
+
+ done 	[Mon Jun 19 21:43:46 2017]
+CM:    	751/1700 = 44.17647
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37160/40117 = 92.62906
+LAS:   	37160/40117 = 92.62906
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #137 *****	[Mon Jun 19 21:43:57 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:44:19 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:44:41 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:45:04 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:45:27 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:45:49 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:46:11 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:46:32 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:46:54 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:47:16 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:47:38 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=137]	[Mon Jun 19 21:47:38 2017]
+
+instance num: 1700	[Mon Jun 19 21:48:12 2017]
+
+ done 	[Mon Jun 19 21:48:12 2017]
+CM:    	758/1700 = 44.58824
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37140/40117 = 92.57921
+LAS:   	37140/40117 = 92.57921
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #138 *****	[Mon Jun 19 21:48:12 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:48:34 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:48:56 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:49:17 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:49:39 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:50:01 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:50:23 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:50:45 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:51:07 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:51:29 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:51:51 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=138]	[Mon Jun 19 21:51:51 2017]
+
+instance num: 1700	[Mon Jun 19 21:52:24 2017]
+
+ done 	[Mon Jun 19 21:52:24 2017]
+CM:    	761/1700 = 44.76471
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37154/40117 = 92.61410
+LAS:   	37154/40117 = 92.61410
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #139 *****	[Mon Jun 19 21:52:24 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:52:47 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:53:10 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:53:31 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:53:54 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:54:16 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:54:38 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:55:00 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:55:23 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 21:55:45 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 21:56:07 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=139]	[Mon Jun 19 21:56:07 2017]
+
+instance num: 1700	[Mon Jun 19 21:56:41 2017]
+
+ done 	[Mon Jun 19 21:56:41 2017]
+CM:    	766/1700 = 45.05882
+ROOT:  	1653/1700 = 97.23529
+UAS:   	37126/40117 = 92.54431
+LAS:   	37126/40117 = 92.54431
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #140 *****	[Mon Jun 19 21:56:41 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 21:57:03 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 21:57:26 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 21:57:49 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 21:58:11 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 21:58:34 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 21:58:56 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 21:59:19 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 21:59:41 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:00:04 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:00:26 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=140]	[Mon Jun 19 22:00:26 2017]
+
+instance num: 1700	[Mon Jun 19 22:01:01 2017]
+
+ done 	[Mon Jun 19 22:01:01 2017]
+CM:    	750/1700 = 44.11765
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37146/40117 = 92.59416
+LAS:   	37146/40117 = 92.59416
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #141 *****	[Mon Jun 19 22:01:01 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:01:22 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:01:44 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:02:07 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:02:29 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:02:51 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:03:14 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:03:36 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:03:58 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:04:21 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:04:43 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=141]	[Mon Jun 19 22:04:43 2017]
+
+instance num: 1700	[Mon Jun 19 22:05:17 2017]
+
+ done 	[Mon Jun 19 22:05:17 2017]
+CM:    	758/1700 = 44.58824
+ROOT:  	1653/1700 = 97.23529
+UAS:   	37140/40117 = 92.57921
+LAS:   	37140/40117 = 92.57921
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #142 *****	[Mon Jun 19 22:05:17 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:05:40 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:06:02 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:06:24 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:06:46 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:07:08 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:07:30 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:07:52 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:08:14 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:08:36 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:08:58 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=142]	[Mon Jun 19 22:08:58 2017]
+
+instance num: 1700	[Mon Jun 19 22:09:31 2017]
+
+ done 	[Mon Jun 19 22:09:31 2017]
+CM:    	739/1700 = 43.47059
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37109/40117 = 92.50193
+LAS:   	37109/40117 = 92.50193
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #143 *****	[Mon Jun 19 22:09:31 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:09:53 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:10:14 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:10:36 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:10:57 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:11:19 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:11:42 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:12:04 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:12:26 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:12:49 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:13:11 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=143]	[Mon Jun 19 22:13:11 2017]
+
+instance num: 1700	[Mon Jun 19 22:13:45 2017]
+
+ done 	[Mon Jun 19 22:13:45 2017]
+CM:    	758/1700 = 44.58824
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37140/40117 = 92.57921
+LAS:   	37140/40117 = 92.57921
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #144 *****	[Mon Jun 19 22:13:45 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:14:07 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:14:29 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:14:51 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:15:13 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:15:35 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:15:57 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:16:19 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:16:41 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:17:02 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:17:24 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=144]	[Mon Jun 19 22:17:24 2017]
+
+instance num: 1700	[Mon Jun 19 22:17:58 2017]
+
+ done 	[Mon Jun 19 22:17:58 2017]
+CM:    	741/1700 = 43.58824
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37135/40117 = 92.56674
+LAS:   	37135/40117 = 92.56674
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #145 *****	[Mon Jun 19 22:17:58 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:18:21 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:18:43 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:19:05 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:19:28 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:19:50 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:20:11 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:20:33 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:20:55 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:21:17 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:21:39 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=145]	[Mon Jun 19 22:21:39 2017]
+
+instance num: 1700	[Mon Jun 19 22:22:12 2017]
+
+ done 	[Mon Jun 19 22:22:12 2017]
+CM:    	748/1700 = 44.00000
+ROOT:  	1651/1700 = 97.11765
+UAS:   	37134/40117 = 92.56425
+LAS:   	37134/40117 = 92.56425
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #146 *****	[Mon Jun 19 22:22:12 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:22:35 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:22:56 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:23:18 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:23:40 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:24:02 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:24:24 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:24:46 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:25:08 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:25:30 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:25:52 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=146]	[Mon Jun 19 22:25:52 2017]
+
+instance num: 1700	[Mon Jun 19 22:26:26 2017]
+
+ done 	[Mon Jun 19 22:26:26 2017]
+CM:    	759/1700 = 44.64706
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37159/40117 = 92.62657
+LAS:   	37159/40117 = 92.62657
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #147 *****	[Mon Jun 19 22:26:26 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:26:48 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:27:10 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:27:32 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:27:54 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:28:16 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:28:39 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:29:01 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:29:23 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:29:45 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:30:06 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=147]	[Mon Jun 19 22:30:06 2017]
+
+instance num: 1700	[Mon Jun 19 22:30:40 2017]
+
+ done 	[Mon Jun 19 22:30:40 2017]
+CM:    	731/1700 = 43.00000
+ROOT:  	1651/1700 = 97.11765
+UAS:   	37089/40117 = 92.45208
+LAS:   	37089/40117 = 92.45208
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #148 *****	[Mon Jun 19 22:30:40 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:31:02 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:31:24 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:31:45 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:32:08 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:32:30 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:32:52 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:33:14 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:33:35 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:33:57 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:34:19 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=148]	[Mon Jun 19 22:34:19 2017]
+
+instance num: 1700	[Mon Jun 19 22:34:52 2017]
+
+ done 	[Mon Jun 19 22:34:52 2017]
+CM:    	751/1700 = 44.17647
+ROOT:  	1653/1700 = 97.23529
+UAS:   	37132/40117 = 92.55926
+LAS:   	37132/40117 = 92.55926
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #149 *****	[Mon Jun 19 22:34:52 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:35:15 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:35:37 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:35:59 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:36:22 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:36:44 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:37:06 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:37:27 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:37:49 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:38:11 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:38:34 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=149]	[Mon Jun 19 22:38:34 2017]
+
+instance num: 1700	[Mon Jun 19 22:39:08 2017]
+
+ done 	[Mon Jun 19 22:39:08 2017]
+CM:    	739/1700 = 43.47059
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37130/40117 = 92.55428
+LAS:   	37130/40117 = 92.55428
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #150 *****	[Mon Jun 19 22:39:08 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:39:29 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:39:51 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:40:13 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:40:36 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:40:57 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:41:19 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:41:41 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:42:03 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:42:25 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:42:46 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=150]	[Mon Jun 19 22:42:46 2017]
+
+instance num: 1700	[Mon Jun 19 22:43:20 2017]
+
+ done 	[Mon Jun 19 22:43:20 2017]
+CM:    	744/1700 = 43.76471
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37138/40117 = 92.57422
+LAS:   	37138/40117 = 92.57422
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #151 *****	[Mon Jun 19 22:43:20 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:43:42 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:44:05 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:44:28 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:44:50 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:45:12 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:45:34 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:45:57 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:46:19 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:46:41 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:47:04 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=151]	[Mon Jun 19 22:47:04 2017]
+
+instance num: 1700	[Mon Jun 19 22:47:38 2017]
+
+ done 	[Mon Jun 19 22:47:38 2017]
+CM:    	755/1700 = 44.41176
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37129/40117 = 92.55179
+LAS:   	37129/40117 = 92.55179
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #152 *****	[Mon Jun 19 22:47:38 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:48:01 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:48:24 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:48:46 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:49:08 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:49:30 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:49:52 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:50:15 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:50:37 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:51:00 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:51:22 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=152]	[Mon Jun 19 22:51:22 2017]
+
+instance num: 1700	[Mon Jun 19 22:51:56 2017]
+
+ done 	[Mon Jun 19 22:51:56 2017]
+CM:    	742/1700 = 43.64706
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37078/40117 = 92.42466
+LAS:   	37078/40117 = 92.42466
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #153 *****	[Mon Jun 19 22:51:56 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:52:19 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:52:41 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:53:04 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:53:27 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:53:49 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:54:12 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:54:35 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:54:58 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:55:20 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 22:55:43 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=153]	[Mon Jun 19 22:55:43 2017]
+
+instance num: 1700	[Mon Jun 19 22:56:17 2017]
+
+ done 	[Mon Jun 19 22:56:17 2017]
+CM:    	754/1700 = 44.35294
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37110/40117 = 92.50442
+LAS:   	37110/40117 = 92.50442
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #154 *****	[Mon Jun 19 22:56:17 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 22:56:40 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 22:57:02 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 22:57:25 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 22:57:47 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 22:58:09 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 22:58:32 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 22:58:54 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 22:59:17 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 22:59:39 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:00:01 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=154]	[Mon Jun 19 23:00:01 2017]
+
+instance num: 1700	[Mon Jun 19 23:00:36 2017]
+
+ done 	[Mon Jun 19 23:00:36 2017]
+CM:    	750/1700 = 44.11765
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37142/40117 = 92.58419
+LAS:   	37142/40117 = 92.58419
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #155 *****	[Mon Jun 19 23:00:36 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:00:58 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:01:21 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:01:43 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:02:05 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:02:27 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:02:49 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:03:11 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:03:34 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:03:56 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:04:18 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=155]	[Mon Jun 19 23:04:18 2017]
+
+instance num: 1700	[Mon Jun 19 23:04:52 2017]
+
+ done 	[Mon Jun 19 23:04:52 2017]
+CM:    	746/1700 = 43.88235
+ROOT:  	1652/1700 = 97.17647
+UAS:   	37103/40117 = 92.48698
+LAS:   	37103/40117 = 92.48698
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #156 *****	[Mon Jun 19 23:04:52 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:05:13 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:05:35 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:05:58 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:06:20 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:06:42 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:07:04 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:07:26 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:07:47 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:08:10 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:08:32 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=156]	[Mon Jun 19 23:08:32 2017]
+
+instance num: 1700	[Mon Jun 19 23:09:05 2017]
+
+ done 	[Mon Jun 19 23:09:05 2017]
+CM:    	746/1700 = 43.88235
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37084/40117 = 92.43961
+LAS:   	37084/40117 = 92.43961
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #157 *****	[Mon Jun 19 23:09:05 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:09:27 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:09:49 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:10:11 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:10:34 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:10:56 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:11:19 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:11:41 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:12:03 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:12:25 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:12:47 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=157]	[Mon Jun 19 23:12:47 2017]
+
+instance num: 1700	[Mon Jun 19 23:13:20 2017]
+
+ done 	[Mon Jun 19 23:13:20 2017]
+CM:    	744/1700 = 43.76471
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37136/40117 = 92.56923
+LAS:   	37136/40117 = 92.56923
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #158 *****	[Mon Jun 19 23:13:20 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:13:42 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:14:04 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:14:26 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:14:49 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:15:11 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:15:33 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:15:55 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:16:17 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:16:40 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:17:02 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=158]	[Mon Jun 19 23:17:02 2017]
+
+instance num: 1700	[Mon Jun 19 23:17:35 2017]
+
+ done 	[Mon Jun 19 23:17:35 2017]
+CM:    	747/1700 = 43.94118
+ROOT:  	1644/1700 = 96.70588
+UAS:   	37088/40117 = 92.44958
+LAS:   	37088/40117 = 92.44958
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #159 *****	[Mon Jun 19 23:17:35 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:17:57 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:18:18 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:18:40 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:19:03 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:19:25 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:19:46 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:20:08 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:20:31 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:20:53 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:21:16 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=159]	[Mon Jun 19 23:21:16 2017]
+
+instance num: 1700	[Mon Jun 19 23:21:49 2017]
+
+ done 	[Mon Jun 19 23:21:49 2017]
+CM:    	743/1700 = 43.70588
+ROOT:  	1646/1700 = 96.82353
+UAS:   	37120/40117 = 92.52935
+LAS:   	37120/40117 = 92.52935
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #160 *****	[Mon Jun 19 23:21:49 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:22:12 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:22:35 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:22:57 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:23:19 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:23:41 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:24:04 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:24:25 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:24:47 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:25:09 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:25:31 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=160]	[Mon Jun 19 23:25:31 2017]
+
+instance num: 1700	[Mon Jun 19 23:26:04 2017]
+
+ done 	[Mon Jun 19 23:26:04 2017]
+CM:    	738/1700 = 43.41176
+ROOT:  	1650/1700 = 97.05882
+UAS:   	37085/40117 = 92.44211
+LAS:   	37085/40117 = 92.44211
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #161 *****	[Mon Jun 19 23:26:04 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:26:26 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:26:48 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:27:10 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:27:32 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:27:54 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:28:16 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:28:37 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:28:59 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:29:21 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:29:44 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=161]	[Mon Jun 19 23:29:44 2017]
+
+instance num: 1700	[Mon Jun 19 23:30:18 2017]
+
+ done 	[Mon Jun 19 23:30:18 2017]
+CM:    	760/1700 = 44.70588
+ROOT:  	1653/1700 = 97.23529
+UAS:   	37125/40117 = 92.54182
+LAS:   	37125/40117 = 92.54182
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #162 *****	[Mon Jun 19 23:30:18 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:30:41 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:31:03 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:31:25 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:31:47 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:32:09 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:32:31 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:32:52 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:33:14 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:33:36 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:33:59 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=162]	[Mon Jun 19 23:33:59 2017]
+
+instance num: 1700	[Mon Jun 19 23:34:32 2017]
+
+ done 	[Mon Jun 19 23:34:32 2017]
+CM:    	760/1700 = 44.70588
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37123/40117 = 92.53683
+LAS:   	37123/40117 = 92.53683
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #163 *****	[Mon Jun 19 23:34:32 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:34:55 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:35:17 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:35:38 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:36:00 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:36:22 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:36:44 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:37:07 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:37:29 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:37:51 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:38:13 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=163]	[Mon Jun 19 23:38:13 2017]
+
+instance num: 1700	[Mon Jun 19 23:38:47 2017]
+
+ done 	[Mon Jun 19 23:38:47 2017]
+CM:    	759/1700 = 44.64706
+ROOT:  	1647/1700 = 96.88235
+UAS:   	37078/40117 = 92.42466
+LAS:   	37078/40117 = 92.42466
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #164 *****	[Mon Jun 19 23:38:47 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:39:09 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:39:30 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:39:52 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:40:14 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:40:36 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:40:58 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:41:20 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:41:42 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:42:04 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:42:26 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=164]	[Mon Jun 19 23:42:26 2017]
+
+instance num: 1700	[Mon Jun 19 23:43:00 2017]
+
+ done 	[Mon Jun 19 23:43:00 2017]
+CM:    	756/1700 = 44.47059
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37121/40117 = 92.53184
+LAS:   	37121/40117 = 92.53184
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #165 *****	[Mon Jun 19 23:43:00 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:43:22 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:43:44 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:44:06 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:44:28 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:44:51 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:45:13 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:45:35 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:45:58 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:46:20 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:46:42 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=165]	[Mon Jun 19 23:46:42 2017]
+
+instance num: 1700	[Mon Jun 19 23:47:15 2017]
+
+ done 	[Mon Jun 19 23:47:15 2017]
+CM:    	750/1700 = 44.11765
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37126/40117 = 92.54431
+LAS:   	37126/40117 = 92.54431
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #166 *****	[Mon Jun 19 23:47:15 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:47:37 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:47:59 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:48:22 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:48:44 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:49:06 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:49:28 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:49:50 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:50:11 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:50:34 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:50:56 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=166]	[Mon Jun 19 23:50:56 2017]
+
+instance num: 1700	[Mon Jun 19 23:51:30 2017]
+
+ done 	[Mon Jun 19 23:51:30 2017]
+CM:    	745/1700 = 43.82353
+ROOT:  	1649/1700 = 97.00000
+UAS:   	37119/40117 = 92.52686
+LAS:   	37119/40117 = 92.52686
+
+best UAS so far (a): 92.62906 [it = 136]
+
+***** Iteration #167 *****	[Mon Jun 19 23:51:30 2017]
+instance num from train1: 10000
+preprocess instance done
+200 400 600 800 1000 	[Mon Jun 19 23:51:52 2017]
+1200 1400 1600 1800 2000 	[Mon Jun 19 23:52:14 2017]
+2200 2400 2600 2800 3000 	[Mon Jun 19 23:52:36 2017]
+3200 3400 3600 3800 4000 	[Mon Jun 19 23:52:58 2017]
+4200 4400 4600 4800 5000 	[Mon Jun 19 23:53:21 2017]
+5200 5400 5600 5800 6000 	[Mon Jun 19 23:53:43 2017]
+6200 6400 6600 6800 7000 	[Mon Jun 19 23:54:05 2017]
+7200 7400 7600 7800 8000 	[Mon Jun 19 23:54:27 2017]
+8200 8400 8600 8800 9000 	[Mon Jun 19 23:54:49 2017]
+9200 9400 9600 9800 10000 	[Mon Jun 19 23:55:11 2017]
+
+*** decoding: on /data/xzjiang/GPU-study/by_yzhang/data/Baidu_PTB_SD/ptb.english.conll.dev.txt.tag [it=167]	[Mon Jun 19 23:55:11 2017]
+
+instance num: 1700	[Mon Jun 19 23:55:44 2017]
+
+ done 	[Mon Jun 19 23:55:44 2017]
+CM:    	759/1700 = 44.64706
+ROOT:  	1648/1700 = 96.94118
+UAS:   	37107/40117 = 92.49695
+LAS:   	37107/40117 = 92.49695
+
+best UAS so far (a): 92.62906 [it = 136]
+
+
+ ---- STOP training due to no accuracy increase in many iterations!
